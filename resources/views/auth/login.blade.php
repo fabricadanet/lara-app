@@ -1,47 +1,6 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Prevent the demo from appearing in search engines -->
-    <meta name="robots" content="noindex">
-
-    <!-- Perfect Scrollbar -->
-    <link type="text/css" href={{ asset('assets/vendor/perfect-scrollbar.css') }} rel="stylesheet">
-
-    <!-- App CSS -->
-    <link type="text/css" href={{ asset('assets/css/app.css') }} rel="stylesheet">
-    {{-- <link type="text/css" href="assets/css/app.rtl.css" rel="stylesheet"> --}}
-
-    <!-- Material Design Icons -->
-    <link type="text/css" href={{ asset('assets/css/vendor-material-icons.css') }} rel="stylesheet">
-    {{-- <link type="text/css" href="assets/css/vendor-material-icons.rtl.css" rel="stylesheet"> --}}
-
-    <!-- Font Awesome FREE Icons -->
-    <link type="text/css" href={{ asset('assets/css/vendor-fontawesome-free.css') }} rel="stylesheet">
-    {{-- <link type="text/css" href="assets/css/vendor-fontawesome-free.rtl.css" rel="stylesheet"> --}}
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133433427-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'UA-133433427-1');
-    </script>
-
-</head>
-
-<body class="layout-login">
-
-    <div class="layout-login__overlay"></div>
+<x-guest-layout>
+    <div class="layout-login__overlay">
+    </div>
     <div class="layout-login__form bg-white" data-perfect-scrollbar>
         <div class="d-flex justify-content-center mt-2 mb-5 navbar-light">
             <a href="index.html" class="navbar-brand" style="min-width: 0">
@@ -60,7 +19,7 @@
                 <label class="text-label" for="email_2">{{ __('Email') }}</label>
                 <div class="input-group input-group-merge">
                     <input id="email_2" type="email" required="" name="email"
-                        class="form-control form-control-prepended" placeholder="john@doe.com">
+                        class="form-control form-control-prepended" placeholder="email@email.com">
                     <div class="input-group-prepend">
                         <div class="input-group-text">
                             <span class="far fa-envelope"></span>
@@ -72,7 +31,7 @@
                 <label class="text-label" for="password_2">{{ __('Password') }}</label>
                 <div class="input-group input-group-merge">
                     <input id="password_2" type="password" name="password" required=""
-                        class="form-control form-control-prepended" placeholder="Enter your password">
+                        class="form-control form-control-prepended" placeholder={{ __('********') }}>
                     <div class="input-group-prepend">
                         <div class="input-group-text">
                             <span class="fa fa-key"></span>
@@ -88,38 +47,11 @@
             </div>
             <div class="form-group text-center">
                 <button class="btn btn-primary mb-5" type="submit">{{ __('Login') }}</button><br>
-                <a href="">{{ _('Forgot password') }}?</a> <br>
-                Don't have an account? <a class="text-body text-underline" href="signup.html">Sign up!</a>
+                <a href="{{ route('password.request') }}">{{ _('Forgot password') }}?</a> <br>
+                {{ __('Dont have an account?') }} <a class="text-body text-underline"
+                    href="{{ route('login') }}">{{ __('Sign up') }}</a>
             </div>
         </form>
     </div>
 
-    <!-- jQuery -->
-    <script src={{ asset('assets/vendor/jquery.min.js') }}></script>
-
-    <!-- Bootstrap -->
-    <script src={{ asset('assets/vendor/popper.min.js') }}></script>
-    <script src={{ asset('assets/vendor/bootstrap.min.js') }}></script>
-
-    <!-- Perfect Scrollbar -->
-    <script src={{ asset('assets/vendor/perfect-scrollbar.min.js') }}></script>
-
-    <!-- DOM Factory -->
-    <script src={{ asset('assets/vendor/dom-factory.js') }}></script>
-
-    <!-- MDK -->
-    <script src={{ asset('assets/vendor/material-design-kit.js') }}></script>
-
-    <!-- App -->
-    <script src={{ asset('assets/js/toggle-check-all.js') }}></script>
-    <script src={{ asset('assets/js/check-selected-row.js') }}></script>
-    <script src={{ asset('assets/js/dropdown.js') }}></script>
-    <script src={{ asset('assets/js/sidebar-mini.js') }}></script>
-    <script src={{ asset('assets/js/app.js') }}></script>
-
-    <!-- App Settings (safe to remove) -->
-    <script src={{ asset('assets/js/app-settings.js') }}></script>
-
-</body>
-
-</html>
+</x-guest-layout>

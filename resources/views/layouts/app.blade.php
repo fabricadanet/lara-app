@@ -40,10 +40,8 @@
 
     <!-- Flatpickr -->
     <link type="text/css" href={{ asset('assets/css/vendor-flatpickr.css') }} rel="stylesheet">
-    <link type="text/css" href={{ asset('assets/css/vendor-flatpickr.rtl.css') }} rel="stylesheet">
-    <link type="text/css" href={{ asset('assets/css/vendor-flatpickr-airbnb.css') }} rel="stylesheet">
-    <link type="text/css" href={{ asset('assets/css/vendor-flatpickr-airbnb.rtl.css') }} rel="stylesheet">
 
+    <link type="text/css" href={{ asset('assets/css/vendor-flatpickr-airbnb.css') }} rel="stylesheet">
     <!-- Vector Maps -->
     <link type="text/css" href={{ asset('assets/vendor/jqvmap/jqvmap.min.css') }} rel="stylesheet">
 

@@ -15,36 +15,23 @@ class CreateFranchisesTable extends Migration
     {
         Schema::create('franchises', function (Blueprint $table) {
             $table->id();
-            $table->string('address_id');
-            $table->string('user_id');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('address_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->string('logo')->nullable();
-            $table->string('phone');
-            $table->string('email');
-            $table->string('website');
-            $table->enum('status', ['active', 'inactive']);
-            $table->string('whatsapp');
-            $table->string('facebook');
-            $table->string('instagram');
-            $table->string('twitter');
-            $table->string('youtube');
-            $table->string('linkedin');
-            $table->string('telegram');
+            $table->string('phone')->nullable();
+            $table->string('email')->nullable();
+            $table->string('website')->nullable();
+            $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->string('whatsapp')->nullable();
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('youtube')->nullable();
+            $table->string('linkedin')->nullable();
+            $table->string('telegram')->nullable();
             $table->timestamps();
-
-            $table
-                ->foreign('address_id')
-                ->references('id')
-                ->on('addresses')
-                ->onUpdate('CASCADE')
-                ->onDelete('CASCADE');
-            $table
-                ->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onUpdate('CASCADE')
-                ->onDelete('CASCADE');
         });
     }
 

@@ -24,7 +24,29 @@ class StoreFranchiseRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'=>['required', 'max:255', 'string'],
+            'description'=> ['required', 'max:255', 'string'],
+            'logo'=>['nullable'],
+            'website'=>['nullable', 'url'],
+            'email'=>['nullable', 'email'],
+            'phone'=>['nullable', 'string'],
+            'whatsapp'=>['nullable','string'],
+            'facebook'=>['nullable','string'],
+            'twitter'=>['nullable','string'],
+            'instagram'=>['nullable','string'],
+            'youtube'=>['nullable','string'],
+            'linkedin'=>['nullable','string'],
+            'telegram'=>['nullable','string'],
+            'street'=>['nullable', 'string'],
+            'city'=>['nullable', 'string'],
+            'state'=>['nullable', 'string'],
+            'country'=>['nullable', 'string'],
+            'complement'=>['nullable', 'string'],
+            'number'=>['nullable', 'string'],
+            'district'=>['nullable', 'string'],
+            'zip_code'=>['nullable', 'string'],
+
+
         ];
     }
 }

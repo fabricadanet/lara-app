@@ -19,4 +19,16 @@ class Address extends Model
         'state',
         'country',
     ];
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
+    public function franchise()
+    {
+        return $this->belongsTo('App\Models\Franchise');
+    }
+    public function realty()
+    {
+        return $this->belongsTo('App\Models\Realty');
+    }
 }

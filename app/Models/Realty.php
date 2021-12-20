@@ -19,4 +19,13 @@ class Realty extends Model
         'address_id',
         'status',
     ];
+        public function address(){
+            return $this->belongsTo('App\Models\Address');
+        }
+        public function user(){
+            return $this->belongsTo('App\Models\User');
+        }
+        public function franchise(){
+            return $this->belongsTo('App\Models\Franchise');
+        }
 }

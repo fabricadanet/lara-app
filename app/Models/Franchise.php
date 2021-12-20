@@ -29,12 +29,12 @@ class Franchise extends Model
 
     public function address()
     {
-        return $this->belongsTo('App\Models\address');
+        return $this->belongsTo('App\Models\Address');
     }
 
     public function user()
     {
-        return $this->belongsTo('App\Models\user');
+        return $this->belongsTo('App\Models\User');
     }
     public function Realty()
     {

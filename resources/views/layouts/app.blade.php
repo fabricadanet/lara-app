@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-BR" dir="ltr">
 
 <head>
@@ -55,12 +54,13 @@
         {{-- <header class="bg-white shadow">
             {{-- <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 {{ $header }}
-            </div> --}}
+            </div>
         </header> --}}
 
         <!-- Page Content -->
         <main>
-            {{ $slot }}
+            @yield('content')
+
         </main>
     </div>
     <div id="app-settings" style="display: none">
@@ -71,6 +71,7 @@
       'mini': 'mini-dashboard.html'
     }"></app-settings>
     </div>
+
 
     <!-- jQuery -->
     <script src={{ asset('assets/vendor/jquery.min.js') }}></script>

@@ -22,22 +22,12 @@ class CreateRealtiesTable extends Migration
             $table->string('rooms');
             $table->string('bathrooms');
             $table->string('garage');
-            $table->string('address_id');
-            $table->string('franchise_id');
-            $table->enum('status', ['active', 'inactive']);
+            $table->foreignId('address_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('franchise_id')->constrained()->onDelete('cascade');
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
-            $table
-                ->foreign('address_id')
-                ->references('id')
-                ->on('addresses')
-                ->onUpdate('CASCADE')
-                ->onDelete('CASCADE');
-            $table
-                ->foreign('franchise_id')
-                ->references('id')
-                ->on('franchises')
-                ->onUpdate('CASCADE')
-                ->onDelete('CASCADE');
+
         });
     }
 

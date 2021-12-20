@@ -64,15 +64,15 @@ return [
     ],
 
     'franchises' => [
-        'name' => 'Franquias',
-        'index_title' => 'Lista de Franquias',
-        'new_title' => 'Nova Franquia',
-        'create_title' => 'Criar Franquia',
-        'edit_title' => 'Editar Franquia',
-        'show_title' => 'Mostrar Franquia',
+        'name' => 'Franchises',
+        'index_title' => 'Franchises List',
+        'new_title' => 'New Franchises',
+        'create_title' => 'Create Franchises',
+        'edit_title' => 'Edit Franchises',
+        'show_title' => 'Show Franchises',
         'inputs' => [
-            'name' => 'Nome',
-            'user_id' => 'Usuário',
+            'name' => 'Name',
+            'user_id' => 'User',
         ],
     ],
 

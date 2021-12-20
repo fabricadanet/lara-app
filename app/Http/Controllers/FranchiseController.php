@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Address;
 use App\Models\franchise;
 use App\Http\Requests\StorefranchiseRequest;
 use App\Http\Requests\UpdatefranchiseRequest;
+use Illuminate\Http\Request;
 
 class FranchiseController extends Controller
 {
@@ -15,7 +17,7 @@ class FranchiseController extends Controller
      */
     public function index()
     {
-        $franchises = [];
+        $franchises = Franchise::all();
         return view('app.franchise.index', compact('franchises'));
     }
 
@@ -26,7 +28,8 @@ class FranchiseController extends Controller
      */
     public function create()
     {
-        //
+
+        return view('app.franchise.create');
     }
 
     /**
@@ -37,7 +40,14 @@ class FranchiseController extends Controller
      */
     public function store(StorefranchiseRequest $request)
     {
-        //
+
+       $data = $request->all();
+
+       $data['user_id'] = auth()->user()->id;
+       $data['address_id'] = Address::create($data)->id;
+       Franchise::create($data);
+
+        return redirect()->route('franchise.index')->withStatus(__('Franchise successfully created.'));
     }
 
     /**

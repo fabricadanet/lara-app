@@ -18,10 +18,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-Route::resource('franchises', FranchiseController::class);
+Route::prefix('/')->middleware('auth')->group(function () {
+    Route::view('dashboard','dashboard')->name('dashboard');
+    Route::resource('franchises', FranchiseController::class);
+});
+
 
 
 require __DIR__.'/auth.php';

@@ -45,9 +45,10 @@ class FranchiseController extends Controller
 
        $data['user_id'] = auth()->user()->id;
        $data['address_id'] = Address::create($data)->id;
+
        Franchise::create($data);
 
-        return redirect()->route('franchise.index')->withStatus(__('Franchise successfully created.'));
+        return redirect()->route('franchises.index')->withStatus(__('Franchise successfully created.'));
     }
 
     /**
@@ -56,10 +57,12 @@ class FranchiseController extends Controller
      * @param  \App\Models\franchise  $franchise
      * @return \Illuminate\Http\Response
      */
-    public function show(franchise $franchise)
+    public function show($id)
     {
-        //
+        $franchise = Franchise::findOrFail($id);
+        return view('app.franchise.show', compact('franchise'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -67,10 +70,12 @@ class FranchiseController extends Controller
      * @param  \App\Models\franchise  $franchise
      * @return \Illuminate\Http\Response
      */
-    public function edit(franchise $franchise)
+    public function edit($id)
     {
-        //
+        $franchise = Franchise::findOrFail($id);
+        return view('app.franchise.edit', compact('franchise'));
     }
+
 
     /**
      * Update the specified resource in storage.
@@ -79,9 +84,13 @@ class FranchiseController extends Controller
      * @param  \App\Models\franchise  $franchise
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatefranchiseRequest $request, franchise $franchise)
+    public function update(UpdatefranchiseRequest $request, $id)
     {
-        //
+        $franchise = Franchise::findOrFail($id);
+        $franchise->update($request->all());
+        $franchise->address->update($request->all());
+        $franchises = Franchise::all();
+        return view('app.franchise.index', compact('franchises'));
     }
 
     /**
@@ -90,8 +99,11 @@ class FranchiseController extends Controller
      * @param  \App\Models\franchise  $franchise
      * @return \Illuminate\Http\Response
      */
-    public function destroy(franchise $franchise)
+    public function destroy($id)
     {
-        //
+        $franchise = Franchise::findOrFail($id);
+        $franchise->delete();
+        $franchises = Franchise::all();
+        return view('app.franchise.index', compact('franchises'));
     }
 }

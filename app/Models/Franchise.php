@@ -26,6 +26,7 @@ class Franchise extends Model
         'linkedin',
         'telegram',
     ];
+    protected $searchableFields = ['*'];
 
     public function address()
     {
@@ -36,7 +37,7 @@ class Franchise extends Model
     {
         return $this->belongsTo('App\Models\User');
     }
-    public function Realty()
+    public function realty()
     {
         return $this->hasMany('App\Models\Realty');
     }

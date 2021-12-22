@@ -5,11 +5,11 @@
         <div class="layout-login-centered-boxed__form card">
             <div class="d-flex flex-column justify-content-center align-items-center mt-2 mb-5 navbar-light">
                 <a href="index.html" class="navbar-brand flex-column mb-2 align-items-center mr-0" style="min-width: 0">
-                    <img class="navbar-brand-icon mr-0 mb-2" src="assets/images/stack-logo-blue.svg" width="25"
-                        alt="FlowDash">
-                    <span>FlowDash</span>
+                    <img class="navbar-brand-icon mr-0 mb-2" src="{{asset('assets/images/stack-logo-blue.svg')}}" width="25"
+                        alt="IntegraMundi">
+                    <span>IntegraMundi</span>
                 </a>
-                <p class="m-0">Create an account with FlowDash</p>
+                <p class="m-0">Registre</p>
             </div>
 
 

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Franchise')
+@section('title', 'Cliente')
 @section('content')
     <!-- Header Layout Content -->
 
@@ -16,12 +16,12 @@
                                     <li class="breadcrumb-item"><a href="#"><i
                                                 class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('crud.franchises.name') }}</li>
+                                    <li class="breadcrumb-item active">{{ __('crud.clients.name') }}</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('crud.franchises.name') }}</h1>
+                            <h1 class="m-0">{{ __('crud.clients.name') }}</h1>
                         </div>
-                        <a href="{{route('franchises.create')}}" class="btn btn-success ml-3">{{__('crud.franchises.create_title')}}</a>
+                        <a href="{{route('clients.create')}}" class="btn btn-success ml-3">{{__('crud.clients.create_title')}}</a>
                     </div>
                 </div>
 
@@ -44,7 +44,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @if (!empty($franchises))
+                            @if (!empty($clients))
                                 <table class="table mb-0 thead-border-top-0 table-striped">
                                     <thead>
                                         <tr>
@@ -58,17 +58,25 @@
                                                 </div>
                                             </th>
                                             <th style="width: 30px;" class="text-center">#ID</th>
+                                            <th class="text-left">Franquia</th>
+                                            <th class="text-left">Tipo de negócio</th>
+                                            <th class="text-left">Prazo</th>
+                                            <th class="text-left">Tipo</th>
                                             <th>{{ __('Name') }}</th>
-                                            <th class="text-center">{{__('crud.properties.name')}}</th>
-                                            <th class="">Corretores</th>
-                                            <th class="text-right">Contato</th>
-                                            <th class="text-right">Ações</th>
+                                            <th class="text-right">Preço</th>
+                                            <th class="text-right">Área</th>
+                                            <th class="text-right">Quartos</th>
+                                            <th class="text-right">Suítes</th>
 
+                                            <th class="text-right">Vagas</th>
+                                            <th class="text-right">Proximidade da Praia</th>
+
+                                            <th class="text-right">Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody class="list" id="franchises">
 
-                                        @foreach ($franchises as $franchise)
+                                        @foreach ($clients as $client)
                                             <tr>
 
                                                 <td class="text-center">
@@ -81,40 +89,34 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="badge badge-soft-dark">{{ $franchise->id }}</div>
+                                                    <div class="badge badge-soft-dark">{{ $client->id }}</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">{{ $client->name }}</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class=" badge badge-soft-success">{{$client->sale_type}}</div>
                                                 </td>
                                                 <td>
-                                                    <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
-                                                        alt="product" style="width:35px" class="rounded mr-2">
-                                                    <a href="#">{{ $franchise->name }}</a>
-                                                </td>
-                                                <td style="width: 120px;" class="text-center">
-                                                    <a href="#"> {{$franchise->realty()->count()}}</a></td>
-                                                <td style="width:200px">
-
-                                                    <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
-                                                        href="#"> 0 </a>
-
-                                                </td>
-
-                                                <td class="text-right">{{$franchise->phone}}</td>
-                                                <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                                </td>
-                                                <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
-                                                        class="btn btn-sm btn-primary">DELETAR</a>
+                                                    <div class="text-right mb-2"><a href="{{route('clients.edit', $client->id) }}"
+                                                            class="btn btn-sm btn-primary">EDITAR</a>
+                                                    </div>
+                                                    <div class="text-right mb-2"><a href="{{route('clients.destroy', $client->id) }}"
+                                                            class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
-{{--                                <div class="card-body text-right">--}}
-{{--                                    15 <span class="text-muted">of 25</span> <a href="#" class="text-muted-light"><i--}}
-{{--                                            class="material-icons ml-1">arrow_forward</i></a>--}}
-{{--                                </div>--}}
+                                <div class="card-body text-right">
+                                    15 <span class="text-muted">of 25</span> <a href="#" class="text-muted-light"><i
+                                            class="material-icons ml-1">arrow_forward</i></a>
+                                </div>
 
                             @else
-                                <p class="text-center text-">Não há franquias cadastradas</p>
+                                <p class="text-center text-">Não há clientes cadastrados!</p>
                             @endif
 
                         </div>

@@ -16,10 +16,10 @@
                                     <li class="breadcrumb-item"><a href="#"><i
                                                 class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('crud.franchises.name') }}</li>
+                                    <li class="breadcrumb-item active">{{ __('crud.properties') }}</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('crud.franchises.name') }}</h1>
+                            <h1 class="m-0">{{ __('crud.properties') }}</h1>
                         </div>
 
                     </div>
@@ -27,32 +27,31 @@
 
                 <div class="container-fluid page__container">
 
-                                <form  method="POST"
-                                       action="{{ route('franchises.store') }}"
-                                       enctype="multipart/form-data"
-                                       class="mt-4"
-                                >
-                                    @csrf
-                                    <div class="card card-form">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-4 card-body">
-                                                <p><strong class="headings-color">Cadastro</strong></p>
+                    <form  method="POST"
+                           action="{{ route('realties.update',$realty->id) }}"
+                           enctype="multipart/form-data"
+                           class="mt-4"
+                    >                        @csrf
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Editar</strong></p>
 
-                                            </div>
-                                            <div class="col-lg-8 card-form__body card-body">
+                                </div>
+                                <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                    @include('app.franchise.form')
+                                        @include('app.realty.form')
 
                                     </div>
 
                                     <button class="btn btn-primary"
-                                            type="submit">Submit</button>
+                                            type="submit">{{__('crud.common.update')}}</button>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
                 </div>
 
             </div>
@@ -66,4 +65,3 @@
 
         <!-- // END header-layout -->
 @endsection
-

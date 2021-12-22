@@ -16,10 +16,10 @@
                                     <li class="breadcrumb-item"><a href="#"><i
                                                 class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('crud.franchises.name') }}</li>
+                                    <li class="breadcrumb-item active">{{ __('Franchises') }}</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('crud.franchises.name') }}</h1>
+                            <h1 class="m-0">{{ __('Franchises') }}</h1>
                         </div>
 
                     </div>
@@ -27,32 +27,28 @@
 
                 <div class="container-fluid page__container">
 
-                                <form  method="POST"
-                                       action="{{ route('franchises.store') }}"
-                                       enctype="multipart/form-data"
-                                       class="mt-4"
-                                >
-                                    @csrf
-                                    <div class="card card-form">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-4 card-body">
-                                                <p><strong class="headings-color">Cadastro</strong></p>
 
-                                            </div>
-                                            <div class="col-lg-8 card-form__body card-body">
+
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Mostrar</strong></p>
+
+                                </div>
+                                <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                    @include('app.franchise.form')
+                                        @include('app.franchise.form')
 
                                     </div>
 
-                                    <button class="btn btn-primary"
-                                            type="submit">Submit</button>
+                                    <a class="btn btn-primary"
+                                            href="{{route('franchises.index')}}">{{__('crud.franchises.index_title')}} </a>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
                 </div>
 
             </div>
@@ -66,4 +62,3 @@
 
         <!-- // END header-layout -->
 @endsection
-

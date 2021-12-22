@@ -59,11 +59,11 @@
     </x-inputs.group>
     <x-inputs.group class="col-sm-6">
         <x-inputs.text
-            name="instagran"
-            label="Instagran"
-            value="{{ old('instagran', ($editing ? $franchise->instagran : '')) }}"
+            name="instagram"
+            label="Instagram"
+            value="{{ old('instagram', ($editing ? $franchise->instagram : '')) }}"
             maxlength="255"
-            placeholder="Instagran"
+            placeholder="Instagram"
             required
         ></x-inputs.text>
     </x-inputs.group>
@@ -90,38 +90,32 @@
         ></x-inputs.text>
     </x-inputs.group>
 </div>
-<div class="form-row">
-    <x-inputs.group class="col-sm-6">
-        <x-inputs.text
-            name="facebook"
-            label="Facebook"
-            value="{{ old('facebook', ($editing ? $franchise->facebook : '')) }}"
-            maxlength="255"
-            placeholder="Facebook"
-            required
-        ></x-inputs.text>
-    </x-inputs.group>
-    <x-inputs.group class="col-sm-6">
-        <x-inputs.text
-            name="instagran"
-            label="Instagran"
-            value="{{ old('instagran', ($editing ? $franchise->instagran : '')) }}"
-            maxlength="255"
-            placeholder="Instagran"
-            required
-        ></x-inputs.text>
-    </x-inputs.group>
-</div>
+
 <div class="form-row">
     <x-inputs.group class="col-sm-12">
         <x-inputs.textarea
             name="description"
             label="Descrição"
-            value="{{ old('description', ($editing ? $franchise->description : '')) }}"
+
             maxlength="255"
             placeholder="Descrição"
             required
-        ></x-inputs.textarea>
+        >
+            @if($editing) {{$franchise->description}} @else  @endif
+        </x-inputs.textarea>
+    </x-inputs.group>
+</div>
+<div class="form-row">
+    <x-inputs.group class="col-sm-12">
+        <x-inputs.text
+            name="logo"
+            label="Logo"
+            value="{{ old('logo', ($editing ? $franchise->logo : '')) }}"
+            maxlength="255"
+            placeholder="Logo"
+
+        ></x-inputs.text>
+
     </x-inputs.group>
 </div>
 <div class="form-row">

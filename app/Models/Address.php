@@ -19,6 +19,7 @@ class Address extends Model
         'state',
         'country',
     ];
+    protected $searchableFields = ['*'];
     public function user()
     {
         return $this->belongsTo('App\Models\User');

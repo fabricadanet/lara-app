@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Franchise')
+@section('title', 'Realty')
 @section('content')
     <!-- Header Layout Content -->
 
@@ -16,10 +16,10 @@
                                     <li class="breadcrumb-item"><a href="#"><i
                                                 class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('crud.franchises.name') }}</li>
+                                    <li class="breadcrumb-item active">{{ __('Franchises') }}</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('crud.franchises.name') }}</h1>
+                            <h1 class="m-0">{{ __('Franchises') }}</h1>
                         </div>
 
                     </div>
@@ -28,7 +28,7 @@
                 <div class="container-fluid page__container">
 
                                 <form  method="POST"
-                                       action="{{ route('franchises.store') }}"
+                                       action="{{ route('realties.store') }}"
                                        enctype="multipart/form-data"
                                        class="mt-4"
                                 >
@@ -42,7 +42,7 @@
                                             <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                    @include('app.franchise.form')
+                                    @include('app.realty.form')
 
                                     </div>
 

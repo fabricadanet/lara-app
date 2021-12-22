@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="pt-BR" dir="ltr">
 
 <head>
     <meta charset="utf-8">
@@ -43,7 +43,7 @@
 
     {{ $slot }}
 
-</body>
+
 
 <!-- jQuery -->
 <script src={{ asset('assets/vendor/jquery.min.js') }}></script>

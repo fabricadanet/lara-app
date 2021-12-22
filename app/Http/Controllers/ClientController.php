@@ -5,10 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\Address;
 use App\Models\Franchise;
 use App\Models\Realty;
+use App\Models\Client;
 use App\Http\Requests\StoreRealtyRequest;
 use App\Http\Requests\UpdateRealtyRequest;
 
-class RealtyController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,8 +18,8 @@ class RealtyController extends Controller
      */
     public function index()
     {
-        return view('app.realty.index', [
-            'realties' => Realty::all()
+        return view('app.client.index', [
+            'clients' => Client::all()
         ]);
     }
 
@@ -29,7 +30,7 @@ class RealtyController extends Controller
      */
     public function create()
     {
-       return view('app.realty.create');
+       return view('app.client.create');
     }
 
     /**
@@ -38,7 +39,7 @@ class RealtyController extends Controller
      * @param  \App\Http\Requests\StoreRealtyRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreRealtyRequest $request)
+    public function store(StoreClientRequest $request)
     {
         $data = $request->all();
 
@@ -46,66 +47,61 @@ class RealtyController extends Controller
         $data['address_id'] = Address::create($data)->id;
         $data['franchise_id'] = 1;
 
-        Realty::create($data);
+        Client::create($data);
 
-        return redirect()->route('realties.index');
+        return redirect()->route('clients.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Realty  $realty
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Client $client)
     {
-        return view('app.realty.show', [
-            'realty' => Realty::findOrFail($id)
+        return view('app.client.show', [
+            'client' => $client
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Realty $realty
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Client $client)
     {
-
-        $realty = Realty::findOrFail($id);
-
-        return view('app.realty.edit', [
-            'realty' => $realty
+        return view('app.client.edit', [
+            'client' => $client
         ]);
     }
-     /**
+
+    /**
      * Update the specified resource in storage.
      *
      * @param  \App\Http\Requests\UpdateRealtyRequest  $request
-     * @param  \App\Models\Realty  $realty
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateRealtyRequest $request, $id)
+    public function update(UpdateClientRequest $request, Client $client)
     {
-        $realty = Realty::findOrFail($id);
-        $realty->update($request->all());
+        $client->update($request->validated());
 
-        return redirect()->route('realties.index');
+        return redirect()->route('clients.index');
     }
-
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Realty  $realty
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Realty $id)
+    public function destroy(Client $client)
     {
-        $realty = Realty::find($id);
-        $realty->delete();
+        $client->delete();
 
-        return redirect()->route('realties.index');
+        return redirect()->route('clients.index');
     }
 }

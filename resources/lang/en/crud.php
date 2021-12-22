@@ -79,10 +79,10 @@ return [
     'partners' => [
         'name' => 'Partners',
         'index_title' => 'Partners List',
-        'new_title' => 'New Partner',
-        'create_title' => 'Create Partner',
-        'edit_title' => 'Edit Partner',
-        'show_title' => 'Show Partner',
+        'new_title' => 'New partner',
+        'create_title' => 'Create partner',
+        'edit_title' => 'Edit partner',
+        'show_title' => 'Show partner',
         'inputs' => [
             'office_id' => 'Office',
             'name' => 'Name',

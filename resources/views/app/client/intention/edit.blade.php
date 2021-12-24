@@ -1,5 +1,4 @@
-@extends('layouts.app')
-@section('title', 'Franchise')
+@section('title', 'Realty')
 @section('content')
     <!-- Header Layout Content -->
 
@@ -16,10 +15,10 @@
                                     <li class="breadcrumb-item"><a href="#"><i
                                                 class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('crud.properties') }}</li>
+                                    <li class="breadcrumb-item active">{{ __('Franchises') }}</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('crud.properties') }}</h1>
+                            <h1 class="m-0">{{ __('Franchises') }}</h1>
                         </div>
 
                     </div>
@@ -28,25 +27,26 @@
                 <div class="container-fluid page__container">
 
                     <form  method="POST"
-                           action="{{ route('realties.update',$realty->id) }}"
+                           action="{{ route('realties.store') }}"
                            enctype="multipart/form-data"
                            class="mt-4"
-                    >                        @csrf
+                    >
+                        @csrf
                         <div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
-                                    <p><strong class="headings-color">Editar</strong></p>
+                                    <p><strong class="headings-color">Cadastro</strong></p>
 
                                 </div>
                                 <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                        @include('app.realty.form')
+                                    iedit
 
                                     </div>
 
                                     <button class="btn btn-primary"
-                                            type="submit">{{__('crud.common.update')}}</button>
+                                            type="submit">Submit</button>
 
                                 </div>
                             </div>

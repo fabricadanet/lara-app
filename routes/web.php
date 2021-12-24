@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FranchiseController;
 use App\Http\Controllers\RealtyController;
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\ProfileController;
 use App\Models\Realty;
 use App\Models\Franchise;
 
@@ -135,8 +136,14 @@ Route::prefix('/')->middleware('auth')->group(function () {
         RealtyController::class,
         'destroy',
     ])->name('realties.destroy');
+
 });
 
-
-
 require __DIR__.'/auth.php';
+require __DIR__.'/profile.php';
+require __DIR__.'/event.php';
+require __DIR__.'/patner.php';
+require __DIR__.'/admin.php';
+require __DIR__.'/franchise.php';
+require __DIR__.'/client.php';
+

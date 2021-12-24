@@ -11,15 +11,11 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="dashboards_menu">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('dashboard')}}">
+                            <a class="sidebar-menu-button" href="{{route('dashboard.admin')}}">
                                 <span class="sidebar-menu-text">Home</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('dashboard')}}">
-                                <span class="sidebar-menu-text">Financeiro</span>
-                            </a>
-                        </li>
+
 
                     </ul>
                 </li>
@@ -73,7 +69,7 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="event_adm">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('clients.index')}}">
+                            <a class="sidebar-menu-button" href="{{route('event.index')}}">
                                 <span class="sidebar-menu-text">Agendamentos</span>
                             </a>
                         </li>
@@ -87,7 +83,7 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="profile_adm">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('franchises.index')}}">
+                            <a class="sidebar-menu-button" href="{{route('profile.index')}}">
                                 <span class="sidebar-menu-text">Editar</span>
                             </a>
                         </li>
@@ -105,15 +101,11 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="dashboards_patner">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('dashboard')}}">
+                            <a class="sidebar-menu-button" href="{{route('dashboard.patner')}}">
                                 <span class="sidebar-menu-text">Home</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('dashboard')}}">
-                                <span class="sidebar-menu-text">Financeiro</span>
-                            </a>
-                        </li>
+
 
                     </ul>
                 </li>
@@ -125,17 +117,17 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="client_patner">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="#">
+                            <a class="sidebar-menu-button" href="{{route('clients.index')}}">
                                 <span class="sidebar-menu-text">Cadastro</span>
                             </a>
                         </li>
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="#">
+                            <a class="sidebar-menu-button" href="{{route('clients.intention')}}">
                                 <span class="sidebar-menu-text">Intenção de Compra</span>
                             </a>
                         </li>
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="#">
+                            <a class="sidebar-menu-button" href="{{route('clients.sales_order')}}">
                                 <span class="sidebar-menu-text">Pedidos de Venda</span>
                             </a>
                         </li>
@@ -164,8 +156,8 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="event_patner">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('clients.index')}}">
-                                <span class="sidebar-menu-text">Transmissões</span>
+                            <a class="sidebar-menu-button" href="{{route('event.index')}}">
+                                <span class="sidebar-menu-text">Agendamentos</span>
                             </a>
                         </li>
                     </ul>
@@ -178,7 +170,7 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="profile_patner">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('franchises.index')}}">
+                            <a class="sidebar-menu-button" href="{{route('profile.index')}}">
                                 <span class="sidebar-menu-text">Editar</span>
                             </a>
                         </li>
@@ -196,15 +188,11 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="dashboards_franchise">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('dashboard')}}">
+                            <a class="sidebar-menu-button" href="{{route('dashboard.franchise')}}">
                                 <span class="sidebar-menu-text">Home</span>
                             </a>
                         </li>
-                        <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('dashboard')}}">
-                                <span class="sidebar-menu-text">Financeiro</span>
-                            </a>
-                        </li>
+
 
                     </ul>
                 </li>
@@ -240,7 +228,7 @@
                             </a>
                         </li>
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="#">
+                            <a class="sidebar-menu-button" href="{{route('event.index')}}">
                                 <span class="sidebar-menu-text">Agenda</span>
                             </a>
                         </li>
@@ -281,7 +269,7 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="profile_franchise">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('franchises.index')}}">
+                            <a class="sidebar-menu-button" href="{{route('profile.index')}}">
                                 <span class="sidebar-menu-text">Editar</span>
                             </a>
                         </li>

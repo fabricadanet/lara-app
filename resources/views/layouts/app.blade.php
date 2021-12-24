@@ -35,7 +35,7 @@
     <link type="text/css" href={{ asset('assets/css/vendor-flatpickr-airbnb.css') }} rel="stylesheet">
     <!-- Vector Maps -->
     <link type="text/css" href={{ asset('assets/vendor/jqvmap/jqvmap.min.css') }} rel="stylesheet">
-
+    <link type="text/css" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.css" rel="stylesheet">
 </head>
 
 <body class="font-sans antialiased">
@@ -320,6 +320,8 @@
 
 {{--    <!-- App Settings (safe to remove) -->--}}
     <script src={{ asset('assets/js/app-settings.js') }}></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.1/locales-all.min.js"></script>
 
 {{--    <!-- Flatpickr -->--}}
 {{--    <script src={{ asset('assets/vendor/flatpickr/flatpickr.min.js') }}></script>--}}
@@ -336,10 +338,13 @@
 {{--    <script src={{ asset('assets/vendor/Chart.min.js') }}></script>--}}
 
 {{--    <!-- App Charts JS -->--}}
-{{--    <script src={{ asset('assets/js/charts.js') }}></script>--}}
+{{--   <script src={{ asset('assets/js/charts.js') }}></script>--}}
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 {{--    <script src={{ asset('assets/js/chartjs-rounded-bar.js') }}></script>--}}
 
 {{--    <!-- Chart Samples -->--}}
+{{-- <script src={{ asset('assets/js/chartjs-samples.js') }}></script>--}}
+{{--    <script src={{asset('assets/js/page.ecommerce.js')}}></script>--}}
 {{--    <script src={{ asset('assets/js/page.dashboard.js') }}></script>--}}
 {{--    <script src={{ asset('assets/js/progress-charts.js') }}></script>--}}
 
@@ -347,7 +352,42 @@
 {{--    <script src={{ asset('assets/vendor/jqvmap/jquery.vmap.min.js') }}></script>--}}
 {{--    <script src={{ asset('assets/vendor/jqvmap/maps/jquery.vmap.world.js') }}></script>--}}
 {{--    <script src={{ asset('assets/js/vector-maps.js') }}></script>--}}
+    <script>
+        const labels = [
+            'Janeiro',
+            'Fevereiro',
+            'Março',
+            'Abril',
+            'Maio',
+            'Junho',
+            'Julho',
+            'Agosto',
+            'Setembro',
+            'Outubro',
+            'Novembro',
+            'Dezembro'
+        ];
 
+        const data = {
+            labels: labels,
+            datasets: [{
+                label: 'Vendas',
+                backgroundColor: 'rgb(99,125,255)',
+                borderColor: 'rgb(99,125,255)',
+                data: [0, 10, 15, 2, 20, 30, 35, 38, 45, 31, 12, 10]
+            }]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {}
+        };
+        const myChart = new Chart(
+            document.getElementById('viewsChart'),
+            config
+        );
+    </script
 </body>
 
 

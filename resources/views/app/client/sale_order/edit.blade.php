@@ -1,4 +1,3 @@
-@extends('layouts.app')
 @section('title', 'Realty')
 @section('content')
     <!-- Header Layout Content -->
@@ -27,32 +26,32 @@
 
                 <div class="container-fluid page__container">
 
-                                <form  method="POST"
-                                       action="{{ route('realties.store') }}"
-                                       enctype="multipart/form-data"
-                                       class="mt-4"
-                                >
-                                    @csrf
-                                    <div class="card card-form">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-4 card-body">
-                                                <p><strong class="headings-color">Cadastro</strong></p>
+                    <form  method="POST"
+                           action="{{ route('realties.store') }}"
+                           enctype="multipart/form-data"
+                           class="mt-4"
+                    >
+                        @csrf
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Cadastro</strong></p>
 
-                                            </div>
-                                            <div class="col-lg-8 card-form__body card-body">
+                                </div>
+                                <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                    @include('app.realty.form')
+                                    iedit
 
                                     </div>
 
                                     <button class="btn btn-primary"
                                             type="submit">Submit</button>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
                 </div>
 
             </div>
@@ -66,4 +65,3 @@
 
         <!-- // END header-layout -->
 @endsection
-

@@ -16,10 +16,10 @@
                                     <li class="breadcrumb-item"><a href="#"><i
                                                 class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('Franchises') }}</li>
+                                    <li class="breadcrumb-item active">cliente</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('Franchises') }}</h1>
+                            <h1 class="m-0">Clientes</h1>
                         </div>
 
                     </div>

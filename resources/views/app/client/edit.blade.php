@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Franchise')
+@section('title', 'Cliente')
 @section('content')
     <!-- Header Layout Content -->
 

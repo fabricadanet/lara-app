@@ -14,12 +14,12 @@
                                     <li class="breadcrumb-item"><a href="#"><i
                                                 class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('crud.properties.name') }}</li>
+                                    <li class="breadcrumb-item active">Vendas</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('crud.properties.name') }}</h1>
+                            <h1 class="m-0">Vendas</h1>
                         </div>
-                        <a href="{{route('realties.create')}}" class="btn btn-success ml-3">{{__('crud.properties.create_title')}}</a>
+
                     </div>
                 </div>
                 <div class="container-fluid page__container">
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @if (!empty($realties))
+
                                 <table class="table mb-0 thead-border-top-0 table-striped">
                                     <thead>
                                         <tr>
@@ -55,24 +55,19 @@
                                             </th>
                                             <th style="width: 30px;" class="text-center">#ID</th>
                                             <th class="text-left">Franquia</th>
-                                            <th class="text-left">Tipo de negócio</th>
+                                            <th class="text-left">Negócio</th>
+                                            <th class="text-left">Imóvel</th>
+                                            <th class="text-left">Cliente</th>
+                                            <th class="text-left">Parceiro</th>
+                                            <th class="text-left">Valor R$</th>
                                             <th class="text-left">Prazo</th>
-                                            <th class="text-left">Tipo</th>
-                                            <th>{{ __('Name') }}</th>
-                                            <th class="text-right">Preço</th>
-                                            <th class="text-right">Área</th>
-                                            <th class="text-right">Quartos</th>
-                                            <th class="text-right">Suítes</th>
 
-                                            <th class="text-right">Vagas</th>
-
-
-                                            <th class="text-center">Ações</th>
+                                            <th class="text-left">Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody class="list" id="franchises">
 
-                                        @foreach ($realties as $realty)
+
                                             <tr>
 
                                                 <td class="text-center">
@@ -85,70 +80,56 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="badge badge-soft-dark">{{ $realty->id }}</div>
+                                                    <div class="badge badge-soft-dark">#1</div>
                                                 </td>
 
                                                 <td>
-                                                    <div><a href="#">{{ $realty->franchise->name }}</a></div>
+                                                    <div><a href="#">Imobiliaria</a></div>
                                                 </td>
                                                 <td style="">
-                                                    <div class=" badge badge-soft-success">{{$realty->sale_type}}</div>
+                                                    <div class=" badge badge-soft-success">VENDA</div>
                                                 </td>
                                                 <td style="">
-                                                    <div class="badge badge-soft-danger">{{$realty->sale_deadline}}</div>
+                                                    <div class="r">Casa na praia - 001001</div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <div >{{ $realty->property_type}}</div>
+                                                    <div >Mário Almeida Júnior</div>
                                                 </td>
                                                 <td>
-                                                    <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
-                                                        alt="product" style="width:35px" class="rounded mr-2">
-                                                    <a href="#">{{ $realty->name }}</a>
+                                                    <div>Marcelo Chagas Neto</div>
                                                 </td>
                                                 <td style="" class="text-right">
-                                                    {{$realty->price}}
+                                                   1.000.000,00
                                                 </td>
                                                 <td style="">
-                                                    <div class="text-right">{{$realty->area}}</div>
-                                                </td>
-
-                                                <td style="">
-                                                    <div class="text-right">{{$realty->bathrooms}}</div>
-                                                </td>
-                                                <td style="">
-                                                    <div class="text-right">{{$realty->suite}}</div>
-                                                </td>
-
-                                                <td style="">
-                                                    <div class="text-right">{{$realty->garage}}</div>
+                                                    <div class="text-right">URGENTE</div>
                                                 </td>
 
                                                 <td class="d-flex justify-content-center align-items-center">
-                                                    <div class=" mx-1"><a href="{{route('realties.create') }}"
-                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    <div class="text-right m-2"><a href="#"
+                                                            class="btn btn-sm btn-success">FECHAR VENDA</a>
                                                     </div>
-                                                    <div class="mx-1"><a href="{{route('realties.create') }}"
-                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    <div class="text-right m-2"><a href="#"
+                                                                                    class="btn btn-sm btn-primary">VOLTAR PARCEIRO</a>
                                                     </div>
-
-                                                    <div class="mx-1"><a href="#"
-                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                    <div class="text-right m-2"><a href="#"
+                                                            class="btn btn-sm btn-danger">CANCELAR VENDA</a>
                                                     </div>
                                                 </td>
                                             </tr>
-                                        @endforeach
+
                                     </tbody>
                                 </table>
                                 <div class="card-body text-right">
-                                    1 <span class="text-muted">de 5</span> <a href="#" class="text-muted-light"><i
+                                    1 <span class="text-muted">de 25</span> <a href="#" class="text-muted-light"><i
                                             class="material-icons ml-1">arrow_forward</i></a>
                                 </div>
 
-                            @else
-                                <p class="text-center text-">Não há propriedades cadastradas!</p>
-                            @endif
+
 
                         </div>
+
+
 
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Franchise')
+@section('title', 'Parceiros')
 @section('content')
     <!-- Header Layout Content -->
 
@@ -14,18 +14,18 @@
                                     <li class="breadcrumb-item"><a href="#"><i
                                                 class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('crud.properties.name') }}</li>
+                                    <li class="breadcrumb-item active">Parceiros</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('crud.properties.name') }}</h1>
+                            <h1 class="m-0">Parceiros</h1>
                         </div>
-                        <a href="{{route('realties.create')}}" class="btn btn-success ml-3">{{__('crud.properties.create_title')}}</a>
+
                     </div>
                 </div>
                 <div class="container-fluid page__container">
                     <div class="card">
 
-                        <div class="table-responsive">
+                        <td class="table-responsive">
 
                             <div class="m-3">
                                 <div class="row">
@@ -40,7 +40,7 @@
                                     </div>
                                 </div>
                             </div>
-                            @if (!empty($realties))
+
                                 <table class="table mb-0 thead-border-top-0 table-striped">
                                     <thead>
                                         <tr>
@@ -55,24 +55,14 @@
                                             </th>
                                             <th style="width: 30px;" class="text-center">#ID</th>
                                             <th class="text-left">Franquia</th>
-                                            <th class="text-left">Tipo de negócio</th>
-                                            <th class="text-left">Prazo</th>
-                                            <th class="text-left">Tipo</th>
-                                            <th>{{ __('Name') }}</th>
-                                            <th class="text-right">Preço</th>
-                                            <th class="text-right">Área</th>
-                                            <th class="text-right">Quartos</th>
-                                            <th class="text-right">Suítes</th>
+                                            <th class="text-left">Corretor</th>
+                                            <th class="text-left">E-mail</th>
+                                            <th class="text-left">Telefone</th>
+                                            <th class="text-left">Whatsapp</th>
 
-                                            <th class="text-right">Vagas</th>
-                                            <th class="text-right">Proximidade da Praia</th>
-
-                                            <th class="text-right">Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody class="list" id="franchises">
-
-                                        @foreach ($realties as $realty)
                                             <tr>
 
                                                 <td class="text-center">
@@ -85,72 +75,259 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="badge badge-soft-dark">{{ $realty->id }}</div>
+                                                    <div class="badge badge-soft-dark">#1</div>
+                                                </td>
+                                                <td>
+                                                    <div class="">Imobiliaria</div>
                                                 </td>
 
                                                 <td>
-                                                    <div><a href="#">{{ $realty->franchise->name }}</a></div>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
                                                 </td>
                                                 <td style="">
-                                                    <div class=" badge badge-soft-success">{{$realty->sale_type}}</div>
+                                                    <div class="">corretor@email.com</div>
                                                 </td>
                                                 <td style="">
-                                                    <div class="badge badge-soft-danger">{{$realty->sale_deadline}}</div>
-                                                </td>
-                                                <td class="text-center">
-                                                    <div >{{ $realty->property_type}}</div>
-                                                </td>
-                                                <td>
-                                                    <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
-                                                        alt="product" style="width:35px" class="rounded mr-2">
-                                                    <a href="#">{{ $realty->name }}</a>
-                                                </td>
-                                                <td style="" class="text-right">
-                                                    {{$realty->price}}
+                                                    <div class="">11 234567890</div>
                                                 </td>
                                                 <td style="">
-                                                    <div class="text-right">{{$realty->area}}</div>
+                                                    <div class="">11 234567890</div>
                                                 </td>
 
-                                                <td style="">
-                                                    <div class="text-right">{{$realty->bathrooms}}</div>
-                                                </td>
-                                                <td style="">
-                                                    <div class="text-right">{{$realty->suite}}</div>
-                                                </td>
-
-                                                <td style="">
-                                                    <div class="text-right">{{$realty->garage}}</div>
-                                                </td>
-
-                                                <td style="">
-                                                    <div class="text-right">{{$realty->proximity_beach}}</div>
-                                                </td>
-
-
-
-                                                <td>
-                                                    <div class="text-right mb-2"><a href="{{route('realties.edit', $realty->id) }}"
-                                                            class="btn btn-sm btn-primary">EDITAR</a>
-                                                    </div>
-                                                    <div class="text-right mb-2"><a href="{{route('realties.destroy', $realty->id) }}"
-                                                            class="btn btn-sm btn-danger">DELETAR</a>
-                                                    </div>
-                                                </td>
                                             </tr>
-                                        @endforeach
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">#2</div>
+                                                </td>
+                                                <td>
+                                                    <div class="">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">parceiro@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">#3</div>
+                                                </td>
+                                                <td>
+                                                    <div class="">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">#4</div>
+                                                </td>
+                                                <td>
+                                                    <div class="">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">#5</div>
+                                                </td>
+                                                <td>
+                                                    <div class="">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">#6</div>
+                                                </td>
+                                                <td>
+                                                    <div class="">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">#7</div>
+                                                </td>
+                                                <td>
+                                                    <div class="">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">#8</div>
+                                                </td>
+                                                <td>
+                                                    <div class="">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+
+                                            </tr>
                                     </tbody>
                                 </table>
                                 <div class="card-body text-right">
-                                    15 <span class="text-muted">of 25</span> <a href="#" class="text-muted-light"><i
+                                    1 <span class="text-muted">of 5</span> <a href="#" class="text-muted-light"><i
                                             class="material-icons ml-1">arrow_forward</i></a>
                                 </div>
 
-                            @else
-                                <p class="text-center text-">Não há propriedades cadastradas!</p>
-                            @endif
 
-                        </div>
+
 
 
 

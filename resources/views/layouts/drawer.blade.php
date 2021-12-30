@@ -22,13 +22,13 @@
                 <li class="sidebar-menu-item">
                     <a class="sidebar-menu-button" data-toggle="collapse" href="#apps_menu1">
                         <i class="sidebar-menu-icon sidebar-menu-icon--left material-icons">slideshow</i>
-                        <span class="sidebar-menu-text">{{__('crud.franchises.name')}}</span>
+                        <span class="sidebar-menu-text">Franquias</span>
                         <span class="ml-auto sidebar-menu-toggle-icon"></span>
                     </a>
                     <ul class="sidebar-submenu collapse" id="apps_menu1">
                         <li class="sidebar-menu-item">
                             <a class="sidebar-menu-button" href="{{route('franchises.index')}}">
-                                <span class="sidebar-menu-text">{{__('crud.franchises.index_title')}}</span>
+                                <span class="sidebar-menu-text">Franquias</span>
                             </a>
                         </li>
                     </ul>
@@ -204,7 +204,7 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="sales_franchise">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('franchises.index')}}">
+                            <a class="sidebar-menu-button" href="{{route('franchises.intention')}}">
                                 <span class="sidebar-menu-text">Pedidos de Venda</span>
                             </a>
                         </li>
@@ -249,13 +249,13 @@
                         </li>
                         <li class="sidebar-menu-item">
 
-                            <a class="sidebar-menu-button" href="{{route('clients.index')}}">
+                            <a class="sidebar-menu-button" href="{{route('franchises.realtors')}}">
                                 <span class="sidebar-menu-text">Corretores</span>
                             </a>
                         </li>
                         <li class="sidebar-menu-item">
 
-                            <a class="sidebar-menu-button" href="{{route('clients.index')}}">
+                            <a class="sidebar-menu-button" href="{{route('franchises.partners')}}">
                                 <span class="sidebar-menu-text">Parceiros</span>
                             </a>
                         </li>

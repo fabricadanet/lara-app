@@ -8,5 +8,6 @@ use App\Http\Controllers\ProfileController;
 Route::prefix('/')->middleware('auth')->group(function () {
 
     Route::view('dashboard/patner', 'dashboard.patner')->name('dashboard.patner');
+    Route::view('patner/create', 'app.partner.create')->name('partner.create');
 });
 

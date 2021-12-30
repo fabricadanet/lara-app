@@ -16,10 +16,10 @@
                                     <li class="breadcrumb-item"><a href="#"><i
                                                 class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('Franchises') }}</li>
+                                    <li class="breadcrumb-item active">Corretor</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('Franchises') }}</h1>
+                            <h1 class="m-0">Corretor</h1>
                         </div>
 
                     </div>
@@ -28,7 +28,7 @@
                 <div class="container-fluid page__container">
 
                                 <form  method="POST"
-                                       action="{{ route('realties.store') }}"
+                                       action="#"
                                        enctype="multipart/form-data"
                                        class="mt-4"
                                 >
@@ -42,12 +42,12 @@
                                             <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                    @include('app.realty.form')
+                                    @include('app.realtor.form')
 
                                     </div>
 
                                     <button class="btn btn-primary"
-                                            type="submit">Submit</button>
+                                            type="submit">Salvar</button>
 
                             </div>
                         </div>

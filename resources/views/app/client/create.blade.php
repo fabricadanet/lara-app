@@ -42,12 +42,12 @@
                                             <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                    @include('app.realty.form')
+                                    @include('app.client.form')
 
                                     </div>
 
                                     <button class="btn btn-primary"
-                                            type="submit">Submit</button>
+                                            type="submit">Enviar</button>
 
                             </div>
                         </div>

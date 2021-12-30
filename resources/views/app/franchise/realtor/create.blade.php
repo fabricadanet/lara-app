@@ -42,12 +42,12 @@
                                             <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                    @include('app.realty.form')
+                                    @include('app.realtor.form')
 
                                     </div>
 
                                     <button class="btn btn-primary"
-                                            type="submit">Submit</button>
+                                            type="submit">Salvar</button>
 
                             </div>
                         </div>

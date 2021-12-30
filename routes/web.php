@@ -137,6 +137,8 @@ Route::prefix('/')->middleware('auth')->group(function () {
         'destroy',
     ])->name('realties.destroy');
 
+    Route::view('realtors/create','app.realtor.create')->name('realtors.create');
+
 });
 
 require __DIR__.'/auth.php';

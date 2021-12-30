@@ -19,13 +19,13 @@
                             </nav>
                             <h1 class="m-0">{{ __('crud.realtors.name') }}</h1>
                         </div>
-                        <a href="{{route('realties.create')}}" class="btn btn-success ml-3">Corretores</a>
+                        <a href="{{route('realtors.create')}}" class="btn btn-success ml-3">Registrar corretor</a>
                     </div>
                 </div>
                 <div class="container-fluid page__container">
                     <div class="card">
 
-                        <div class="table-responsive">
+                        <td class="table-responsive">
 
                             <div class="m-3">
                                 <div class="row">
@@ -59,12 +59,10 @@
                                             <th class="text-left">E-mail</th>
                                             <th class="text-left">Telefone</th>
                                             <th class="text-left">Whatsapp</th>
-                                            <th class="text-right">Ações</th>
+                                            <th class="text-center">Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody class="list" id="franchises">
-
-
                                             <tr>
 
                                                 <td class="text-center">
@@ -77,32 +75,338 @@
                                                     </div>
                                                 </td>
                                                 <td>
+                                                    <div class="">#1</div>
+                                                </td>
+                                                <td>
                                                     <div class="badge badge-soft-dark">Imobiliaria</div>
                                                 </td>
 
                                                 <td>
-                                                    <div><a href="#">Marcelo Chagas Netto}</a></div>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
                                                 </td>
                                                 <td style="">
-                                                    <div class=" badge badge-soft-success">corretor@email.com</div>
+                                                    <div class="">corretor@email.com</div>
                                                 </td>
                                                 <td style="">
-                                                    <div class="badge badge-soft-danger">11 234567890</div>
+                                                    <div class="">11 234567890</div>
                                                 </td>
-                                                <td class="text-center">
-                                                    <div >11 234567890</div>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
                                                 </td>
-                                                <td class=""><a href="{{route('franchises.create') }}"
+                                                 <td class="d-flex justify-content-center align-items-center">
+                                                <div class=" mx-1"><a href="{{route('franchises.create') }}"
                                                                 class="btn btn-sm btn-success">VER</a>
-                                                </td>
-                                                <td class=""><a href="{{route('franchises.create') }}"
+                                                </div>
+                                                <div class="mx-1"><a href="{{route('franchises.create') }}"
                                                                 class="btn btn-sm btn-primary">EDITAR</a>
-                                                </td>
-                                                <td class=""><a href="#"
+                                                </div>
+
+                                                <div class="mx-1"><a href="#"
                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                                </div>
                                                 </td>
                                             </tr>
-                                        @endforeach
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">#2</div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    </div>
+                                                    <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    </div>
+
+                                                    <div class="mx-1"><a href="#"
+                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">#3</div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    </div>
+                                                    <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    </div>
+
+                                                    <div class="mx-1"><a href="#"
+                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">#4</div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    </div>
+                                                    <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    </div>
+
+                                                    <div class="mx-1"><a href="#"
+                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">#5</div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    </div>
+                                                    <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    </div>
+
+                                                    <div class="mx-1"><a href="#"
+                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">#6</div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    </div>
+                                                    <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    </div>
+
+                                                    <div class="mx-1"><a href="#"
+                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">#7</div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    </div>
+                                                    <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    </div>
+
+                                                    <div class="mx-1"><a href="#"
+                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox"
+                                                               class="custom-control-input js-check-selected-row"
+                                                               id="customCheck1_1">
+                                                        <label class="custom-control-label" for="customCheck1_1"><span
+                                                                class="text-hide">Check</span></label>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="">#8</div>
+                                                </td>
+                                                <td>
+                                                    <div class="badge badge-soft-dark">Imobiliaria</div>
+                                                </td>
+
+                                                <td>
+                                                    <div><a href="#">Marcelo Chagas Netto</a></div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">corretor@email.com</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="">11 234567890</div>
+                                                </td>
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    </div>
+                                                    <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    </div>
+
+                                                    <div class="mx-1"><a href="#"
+                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div>
+                                                </td>
+                                            </tr>
                                     </tbody>
                                 </table>
                                 <div class="card-body text-right">
@@ -112,7 +416,6 @@
 
 
 
-                        </div>
 
 
 

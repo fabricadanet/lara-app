@@ -93,14 +93,17 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -131,14 +134,17 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -169,14 +175,17 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -207,14 +216,17 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -245,14 +257,17 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -283,14 +298,17 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -321,14 +339,17 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -359,14 +380,17 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -397,52 +421,17 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                                                                class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="text-center">
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox"
-                                                       class="custom-control-input js-check-selected-row"
-                                                       id="customCheck1_1">
-                                                <label class="custom-control-label" for="customCheck1_1"><span
-                                                        class="text-hide">Check</span></label>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="badge badge-soft-dark">#10</div>
-                                        </td>
-                                        <td>
-                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
-                                                 alt="product" style="width:35px" class="rounded mr-2">
-                                            <a href="#">Imobiliaria</a>
-                                        </td>
-                                        <td style="width: 120px;" class="text-center">
-                                            <a href="#"> 1500</a></td>
-                                        <td style="width:200px">
-
-                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
-                                                href="#"> 0 </a>
-
-                                        </td>
-
-                                        <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
                                                                   class="btn btn-sm btn-success">VER</a>
-                                        </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                                  class="btn btn-sm btn-primary">EDITAR</a>
-                                        </td>
-                                        <td class=""><a href="#"
-                                                                  class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr>
@@ -473,14 +462,58 @@
                                         </td>
 
                                         <td class="text-right">47 1234 5678</td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-success">VER</a>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
-                                        <td class=""><a href="{{route('franchises.create') }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
                                         </td>
-                                        <td class=""><a href="#"
-                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#10</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="d-flex justify-content-center align-items-center">
+                                            <div class=" mx-1"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-success">VER</a>
+                                            </div>
+                                            <div class="mx-1"><a href="{{route('franchises.create') }}"
+                                                                 class="btn btn-sm btn-primary">EDITAR</a>
+                                            </div>
+
+                                            <div class="mx-1"><a href="#"
+                                                                 class="btn btn-sm btn-danger">DELETAR</a>
+                                            </div>
                                         </td>
                                     </tr>
                                     </tbody>

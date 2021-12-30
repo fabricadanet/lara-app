@@ -99,23 +99,25 @@
                                                 <td>
                                                     <div><a href="#">{{ $client->facebook }}</a></div>
                                                 </td>
-                                                <td>
-                                                    <div class="d-flex  justify-content-center align-items-center ">
-                                                        <div class="text-left  m-2"><a href="{{ route('clients.create') }}"
-                                                                                       class="btn btn-sm btn-primary">EDITAR</a>
-                                                        </div>
-                                                        <div class="text-right m-2"><a href="#"
-                                                                                        class="btn btn-sm btn-danger">DELETAR</a>
-                                                        </div>
+
+                                                <td class="d-flex justify-content-center align-items-center">
+                                                    <div class=" mx-1"><a href="{{route('clients.create') }}"
+                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    </div>
+                                                    <div class="mx-1"><a href="{{route('clients.create') }}"
+                                                                         class="btn btn-sm btn-primary">EDITAR</a>
                                                     </div>
 
+                                                    <div class="mx-1"><a href="#"
+                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div>
                                                 </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
                                 <div class="card-body text-right">
-                                    15 <span class="text-muted">of 25</span> <a href="#" class="text-muted-light"><i
+                                    1 <span class="text-muted">de 25</span> <a href="#" class="text-muted-light"><i
                                             class="material-icons ml-1">arrow_forward</i></a>
                                 </div>
 

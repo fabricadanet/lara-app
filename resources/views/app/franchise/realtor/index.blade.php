@@ -92,13 +92,14 @@
                                                 <td class="text-center">
                                                     <div >11 234567890</div>
                                                 </td>
-                                                <td>
-                                                    <div class="text-right mb-2"><a href="#"
-                                                            class="btn btn-sm btn-primary">EDITAR</a>
-                                                    </div>
-                                                    <div class="text-right mb-2"><a href="#"
-                                                            class="btn btn-sm btn-danger">DELETAR</a>
-                                                    </div>
+                                                <td class=""><a href="{{route('franchises.create') }}"
+                                                                class="btn btn-sm btn-success">VER</a>
+                                                </td>
+                                                <td class=""><a href="{{route('franchises.create') }}"
+                                                                class="btn btn-sm btn-primary">EDITAR</a>
+                                                </td>
+                                                <td class=""><a href="#"
+                                                                class="btn btn-sm btn-danger">DELETAR</a>
                                                 </td>
                                             </tr>
                                         @endforeach

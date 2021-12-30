@@ -68,54 +68,393 @@
                                     </thead>
                                     <tbody class="list" id="franchises">
 
-                                        @foreach ($franchises as $franchise)
-                                            <tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#1</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
 
-                                                <td class="text-center">
-                                                    <div class="custom-control custom-checkbox">
-                                                        <input type="checkbox"
-                                                            class="custom-control-input js-check-selected-row"
-                                                            id="customCheck1_1">
-                                                        <label class="custom-control-label" for="customCheck1_1"><span
-                                                                class="text-hide">Check</span></label>
-                                                    </div>
-                                                </td>
-                                                <td>
-                                                    <div class="badge badge-soft-dark">{{ $franchise->id }}</div>
-                                                </td>
-                                                <td>
-                                                    <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
-                                                        alt="product" style="width:35px" class="rounded mr-2">
-                                                    <a href="#">{{ $franchise->name }}</a>
-                                                </td>
-                                                <td style="width: 120px;" class="text-center">
-                                                    <a href="#"> {{$franchise->realty()->count()}}</a></td>
-                                                <td style="width:200px">
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
 
-                                                    <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
-                                                        href="#"> 0 </a>
+                                        </td>
 
-                                                </td>
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#2</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
 
-                                                <td class="text-right">{{$franchise->phone}}</td>
-                                                <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
-                                                        class="btn btn-sm btn-primary">EDITAR</a>
-                                                </td>
-                                                <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
-                                                        class="btn btn-sm btn-primary">DELETAR</a>
-                                                </td>
-                                            </tr>
-                                        @endforeach
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#3</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#4</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#5</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#6</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#7</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#8</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#9</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.edit', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="{{route('franchises.destroy', $franchise->id) }}"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#10</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="#"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox"
+                                                       class="custom-control-input js-check-selected-row"
+                                                       id="customCheck1_1">
+                                                <label class="custom-control-label" for="customCheck1_1"><span
+                                                        class="text-hide">Check</span></label>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="badge badge-soft-dark">#10</div>
+                                        </td>
+                                        <td>
+                                            <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
+                                                 alt="product" style="width:35px" class="rounded mr-2">
+                                            <a href="#">Imobiliaria</a>
+                                        </td>
+                                        <td style="width: 120px;" class="text-center">
+                                            <a href="#"> 1500</a></td>
+                                        <td style="width:200px">
+
+                                            <i class="material-icons icon-18pt text-muted mr-1">list</i> <a
+                                                href="#"> 0 </a>
+
+                                        </td>
+
+                                        <td class="text-right">47 1234 5678</td>
+                                        <td class="text-right"><a href="{{route('franchises.create') }}"
+                                                                  class="btn btn-sm btn-primary">EDITAR</a>
+                                        </td>
+                                        <td class="text-right"><a href="#"
+                                                                  class="btn btn-sm btn-primary">DELETAR</a>
+                                        </td>
+                                    </tr>
                                     </tbody>
                                 </table>
-{{--                                <div class="card-body text-right">--}}
-{{--                                    15 <span class="text-muted">of 25</span> <a href="#" class="text-muted-light"><i--}}
-{{--                                            class="material-icons ml-1">arrow_forward</i></a>--}}
-{{--                                </div>--}}
-
-                            @else
-                                <p class="text-center text-">Não há franquias cadastradas</p>
-                            @endif
 
                         </div>
 

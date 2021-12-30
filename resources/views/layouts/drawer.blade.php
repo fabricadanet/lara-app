@@ -27,7 +27,7 @@
                     </a>
                     <ul class="sidebar-submenu collapse" id="apps_menu1">
                         <li class="sidebar-menu-item">
-                            <a class="sidebar-menu-button" href="{{route('clients.index')}}">
+                            <a class="sidebar-menu-button" href="{{route('franchises.index')}}">
                                 <span class="sidebar-menu-text">{{__('crud.franchises.index_title')}}</span>
                             </a>
                         </li>

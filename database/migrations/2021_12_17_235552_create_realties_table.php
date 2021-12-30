@@ -33,7 +33,7 @@ class CreateRealtiesTable extends Migration
             $table->enum('decision maker', ['Marido', 'Esposa', 'Companeiro(a)', 'Casal', 'Família'])->default('Família')->nullable();
             $table->enum('location', ['Centros Urbanos', 'Área Comercial', 'Acesso Rodovia', 'Área Rural', 'Condomínio', 'Outros'])->default('Centros Urbanos')->nullable();
             $table->enum('sale_deadline', ['Urgente', 'Durante o ano', 'Sem previsão'])->default('Urgente')->nullable();
-            $table->enum('financing', ['Já financiado', 'À financiar', 'À vista', 'Outro'])->default('Á financiar')->nullable();
+            $table->enum('financing', ['Financiado', 'Financiar', 'vista', 'Outro'])->default('Financiar')->nullable();
             $table->enum('construction', ['Novo', 'Usado', 'Lançamento 01 ano', 'Lançcamento 02 anos', 'lançamento 03 anos ou mais'])->default('Novo')->nullable();
             $table->enum('property_type', ['Casa', 'Apartamento', 'Cobertura', 'Terreno', 'Chacará', 'Sobrado', 'Flat', 'Kitnet', 'Comercial', 'Loft', 'Industrial', 'Outros'])->default('Casa')->nullable();
             $table->enum('swap_type', ['Não', 'Carro', 'Imóvel', 'Terreno', 'Outro'])->default('Não')->nullable();

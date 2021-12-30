@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Realty;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class RealtyFactory extends Factory
@@ -14,7 +15,7 @@ class RealtyFactory extends Factory
     public function definition()
     {
         return [
-            //
+
         ];
     }
 }

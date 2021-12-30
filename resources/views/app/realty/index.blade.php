@@ -130,12 +130,18 @@
 
 
                                                 <td>
-                                                    <div class="text-right mb-2"><a href="{{route('realties.edit', $realty->id) }}"
-                                                            class="btn btn-sm btn-primary">EDIT</a>
+                                                    <div class=" d-flex  justify-content-center align-items-center ">
+                                                        <div class="text-right mx-1"><a href="{{route('realties.create') }}"
+                                                                                        class="btn  btn-success">VER</a>
+                                                        </div>
+                                                        <div class="text-right mx-1"><a href="{{route('realties.create') }}"
+                                                                                        class="btn  btn-primary">EDITAR</a>
+                                                        </div>
+                                                        <div class="text-right mx-1"><a href="#"
+                                                                                        class="btn btn-danger">DELETAR</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="text-right mb-2"><a href="{{route('realties.destroy', $realty->id) }}"
-                                                            class="btn btn-sm btn-danger">DELETE</a>
-                                                    </div>
+
                                                 </td>
                                             </tr>
                                         @endforeach

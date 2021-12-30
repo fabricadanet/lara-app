@@ -131,10 +131,10 @@
 
                                                 <td>
                                                     <div class="text-right mb-2"><a href="{{route('realties.edit', $realty->id) }}"
-                                                            class="btn btn-sm btn-primary">EDIT</a>
+                                                            class="btn btn-sm btn-primary">EDITAR</a>
                                                     </div>
                                                     <div class="text-right mb-2"><a href="{{route('realties.destroy', $realty->id) }}"
-                                                            class="btn btn-sm btn-danger">DELETE</a>
+                                                            class="btn btn-sm btn-danger">DELETAR</a>
                                                     </div>
                                                 </td>
                                             </tr>

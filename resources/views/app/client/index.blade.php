@@ -58,20 +58,13 @@
                                                 </div>
                                             </th>
                                             <th style="width: 30px;" class="text-center">#ID</th>
-                                            <th class="text-left">Franquia</th>
-                                            <th class="text-left">Tipo de negócio</th>
-                                            <th class="text-left">Prazo</th>
-                                            <th class="text-left">Tipo</th>
-                                            <th>{{ __('Name') }}</th>
-                                            <th class="text-right">Preço</th>
-                                            <th class="text-right">Área</th>
-                                            <th class="text-right">Quartos</th>
-                                            <th class="text-right">Suítes</th>
+                                            <th >Nome</th>
+                                            <th >E-mail</th>
+                                            <th >Telefone</th>
+                                            <th>Whatsapp</th>
+                                            <th>Facebook</th>
 
-                                            <th class="text-right">Vagas</th>
-                                            <th class="text-right">Proximidade da Praia</th>
-
-                                            <th class="text-right">Ações</th>
+                                            <th class="text-center">Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody class="list" id="franchises">
@@ -95,16 +88,27 @@
                                                 <td>
                                                     <div><a href="#">{{ $client->name }}</a></div>
                                                 </td>
-                                                <td style="">
-                                                    <div class=" badge badge-soft-success">{{$client->sale_type}}</div>
+                                                <td>
+                                                    <div><a href="#">{{ $client->email }}</a></div>
+                                                <td>
+                                                    <div><a href="#">{{ $client->phone }}</a></div>
                                                 </td>
                                                 <td>
-                                                    <div class="text-right mb-2"><a href="{{route('clients.edit', $client->id) }}"
-                                                            class="btn btn-sm btn-primary">EDITAR</a>
+                                                    <div><a href="#">{{ $client->whatsapp }}</a></div>
+                                                </td>
+                                                <td>
+                                                    <div><a href="#">{{ $client->facebook }}</a></div>
+                                                </td>
+                                                <td>
+                                                    <div class="d-flex  justify-content-center align-items-center ">
+                                                        <div class="text-left  m-2"><a href="{{ route('clients.create') }}"
+                                                                                       class="btn btn-sm btn-primary">EDITAR</a>
+                                                        </div>
+                                                        <div class="text-right m-2"><a href="#"
+                                                                                        class="btn btn-sm btn-danger">DELETAR</a>
+                                                        </div>
                                                     </div>
-                                                    <div class="text-right mb-2"><a href="{{route('clients.destroy', $client->id) }}"
-                                                            class="btn btn-sm btn-danger">DELETAR</a>
-                                                    </div>
+
                                                 </td>
                                             </tr>
                                         @endforeach

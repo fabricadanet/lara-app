@@ -85,20 +85,20 @@
                                                     </div>
                                                 </td>
                                                 <td>
-                                                    <div class="badge badge-soft-dark">{{ $realty->id }}</div>
+                                                    <div class="badge badge-soft-dark">#1</div>
                                                 </td>
 
                                                 <td>
-                                                    <div><a href="#">{{ $realty->franchise->name }}</a></div>
+                                                    <div><a href="#">Casa na praia</a></div>
                                                 </td>
                                                 <td style="">
-                                                    <div class=" badge badge-soft-success">{{$realty->sale_type}}</div>
+                                                    <div class=" badge badge-soft-success">Venda</div>
                                                 </td>
                                                 <td style="">
-                                                    <div class="badge badge-soft-danger">{{$realty->sale_deadline}}</div>
+                                                    <div class="badge badge-soft-danger">URGENTE</div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <div >{{ $realty->property_type}}</div>
+                                                    <div >Casa</div>
                                                 </td>
                                                 <td>
                                                     <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"

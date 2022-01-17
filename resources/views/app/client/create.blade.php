@@ -26,7 +26,7 @@
 
                 <div class="container-fluid page__container">
 
-                    <form method="POST" action="{{ route('realties.store') }}" enctype="multipart/form-data"
+                    <form method="POST" action="{{ route('clients.store') }}" enctype="multipart/form-data"
                         class="mt-4">
                         @csrf
                         <div class="card card-form">

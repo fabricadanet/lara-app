@@ -41,6 +41,25 @@
                                                 <x-inputs.text name="name" label="Nome" value="" maxlength="255"
                                                     placeholder="Nome do Cliente"></x-inputs.text>
                                             </x-inputs.group>
+                                            <x-inputs.group class="col-sm-12 ">
+                                                <x-inputs.select class="my-auto mt-3" name="client" Label="Cliente">
+                                                    <option value="">Selecione</option>
+                                                    @foreach ($clients as $client)
+                                                        <option value="{{ $client->id }}">{{ $client->id }} -
+                                                            {{ $client->name }}</option>
+                                                    @endforeach
+                                                </x-inputs.select>
+                                            </x-inputs.group>
+                                            <x-inputs.group class="col-sm-12 ">
+                                                <x-inputs.select class="my-auto mt-3" name="client" Label="Cliente">
+                                                    <option value="">Selecione</option>
+                                                    @foreach ($realties as $realty)
+                                                        <option value="{{ $realty->id }}">{{ $realty->id }} -
+                                                            {{ $realty->name }} - {{ $realty->franchise->name }}
+                                                        </option>
+                                                    @endforeach
+                                                </x-inputs.select>
+                                            </x-inputs.group>
 
                                         </div>
                                         <div class="form-row">

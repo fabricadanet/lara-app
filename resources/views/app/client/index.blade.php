@@ -100,10 +100,11 @@
                                                 </td>
 
                                                 <td class="d-flex justify-content-center align-items-center">
-                                                    <div class="mx-1 "><a href="{{ route('clients.create') }}"
+                                                    {{-- <div class="mx-1 "><a href="{{ route('clients.edit',$cliente->id) }}"
                                                             class="btn btn-sm btn-success">VER</a>
-                                                    </div>
-                                                    <div class="mx-1"><a href="{{ route('clients.create') }}"
+                                                    </div> --}}
+                                                    <div class="mx-1"><a
+                                                            href="{{ route('clients.edit', $client->id) }}"
                                                             class="btn btn-sm btn-primary">EDITAR</a>
                                                     </div>
 

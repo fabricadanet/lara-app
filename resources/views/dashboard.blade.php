@@ -185,7 +185,7 @@
                 </div>
             </div>
             <!-- // END drawer-layout__content -->
-            @include('layouts.drawer.patner')
+            @include('layouts.drawer-patner')
 
             <!-- // END drawer-layout -->
 

@@ -12,13 +12,13 @@
                     <div class="page__heading d-flex align-items-center">
                         <div class="flex">
                             <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb mb-0">
+                                <ol class="mb-0 breadcrumb">
                                     <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('crud.properties') }}</li>
+                                    <li class="breadcrumb-item active">{{ __('Cliente') }}</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('crud.properties') }}</h1>
+                            <h1 class="m-0">{{ __('Cliente') }}</h1>
                         </div>
 
                     </div>
@@ -26,7 +26,7 @@
 
                 <div class="container-fluid page__container">
 
-                    <form method="POST" action="{{ route('realties.update', $realty->id) }}" enctype="multipart/form-data"
+                    <form method="POST" action="{{ route('clients.update', $client->id) }} " enctype="multipart/form-data"
                         class="mt-4"> @csrf
                         <div class="card card-form">
                             <div class="row no-gutters">
@@ -37,7 +37,8 @@
                                 <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                        @include('app.realty.form')
+
+                                        @include('app.client.form')
 
                                     </div>
 

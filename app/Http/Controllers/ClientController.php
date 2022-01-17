@@ -6,8 +6,8 @@ use App\Models\Address;
 use App\Models\Franchise;
 use App\Models\Realty;
 use App\Models\Client;
-use App\Http\Requests\StoreRealtyRequest;
-use App\Http\Requests\UpdateRealtyRequest;
+use App\Http\Requests\StoreClientRequest;
+use App\Http\Requests\UpdateClientRequest;
 
 class ClientController extends Controller
 {
@@ -58,12 +58,13 @@ class ClientController extends Controller
      * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function show(Client $client)
+    public function show($id)
     {
         return view('app.client.show', [
-            'client' => $client
+            'client' => Client::findOrFail($id)
         ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -71,12 +72,15 @@ class ClientController extends Controller
      * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function edit(Client $client)
+    public function edit($id)
     {
+
         return view('app.client.edit', [
-            'client' => $client
+            'client' => Client::findOrFail($id)
         ]);
     }
+
+
 
     /**
      * Update the specified resource in storage.
@@ -85,8 +89,9 @@ class ClientController extends Controller
      * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateClientRequest $request, Client $client)
+    public function update(UpdateClientRequest $request, $id)
     {
+        $client = Client::findOrFail($id);
         $client->update($request->validated());
 
         return redirect()->route('clients.index');
@@ -103,5 +108,12 @@ class ClientController extends Controller
         $client->delete();
 
         return redirect()->route('clients.index');
+    }
+
+    public function buyIntention(){
+        $clients = Client::all();
+        $realties = Realty::all();
+
+        return view('app.client.intention.index',compact('clients','realties'));
     }
 }

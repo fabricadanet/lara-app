@@ -14,10 +14,10 @@
                                 <ol class="mb-0 breadcrumb">
                                     <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
                                     </li>
-                                    <li class="breadcrumb-item active">{{ __('Franchises') }}</li>
+                                    <li class="breadcrumb-item active">{{ __('Intenção de compra') }}</li>
                                 </ol>
                             </nav>
-                            <h1 class="m-0">{{ __('Franchises') }}</h1>
+                            <h1 class="m-0">{{ __('Intenção de compra') }}</h1>
                         </div>
 
                     </div>
@@ -25,19 +25,18 @@
 
                 <div class="container-fluid page__container">
 
-                    <form method="POST" action="{{ route('realties.store') }}" enctype="multipart/form-data"
-                        class="mt-4">
+                    <form method="POST" action="" enctype="multipart/form-data" class="mt-4">
                         @csrf
                         <div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
-                                    <p><strong class="headings-color">Cadastro</strong></p>
+                                    <p><strong class="headings-color">Cadastro Intenção Compra</strong></p>
 
                                 </div>
                                 <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                        iedit
+
 
                                     </div>
 

@@ -12,16 +12,16 @@
                     <div class="page__heading d-flex align-items-center">
                         <div class="flex">
                             <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item"><a href="#"><i
-                                                class="material-icons icon-20pt">home</i></a>
+                                <ol class="mb-0 breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
                                     </li>
                                     <li class="breadcrumb-item active">{{ __('crud.clients.name') }}</li>
                                 </ol>
                             </nav>
                             <h1 class="m-0">{{ __('crud.clients.name') }}</h1>
                         </div>
-                        <a href="{{route('clients.create')}}" class="btn btn-success ml-3">{{__('crud.clients.create_title')}}</a>
+                        <a href="{{ route('clients.create') }}"
+                            class="ml-3 btn btn-success">{{ __('crud.clients.create_title') }}</a>
                     </div>
                 </div>
 
@@ -50,17 +50,16 @@
                                         <tr>
                                             <th style="width: 18px;">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox"
-                                                        class="custom-control-input js-toggle-check-all"
+                                                    <input type="checkbox" class="custom-control-input js-toggle-check-all"
                                                         data-target="#products" id="customCheckAll">
                                                     <label class="custom-control-label" for="customCheckAll"><span
                                                             class="text-hide">Toggle all</span></label>
                                                 </div>
                                             </th>
                                             <th style="width: 30px;" class="text-center">#ID</th>
-                                            <th >Nome</th>
-                                            <th >E-mail</th>
-                                            <th >Telefone</th>
+                                            <th>Nome</th>
+                                            <th>E-mail</th>
+                                            <th>Telefone</th>
                                             <th>Whatsapp</th>
                                             <th>Facebook</th>
 
@@ -101,24 +100,24 @@
                                                 </td>
 
                                                 <td class="d-flex justify-content-center align-items-center">
-                                                    <div class=" mx-1"><a href="{{route('clients.create') }}"
-                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    <div class="mx-1 "><a href="{{ route('clients.create') }}"
+                                                            class="btn btn-sm btn-success">VER</a>
                                                     </div>
-                                                    <div class="mx-1"><a href="{{route('clients.create') }}"
-                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    <div class="mx-1"><a href="{{ route('clients.create') }}"
+                                                            class="btn btn-sm btn-primary">EDITAR</a>
                                                     </div>
 
                                                     <div class="mx-1"><a href="#"
-                                                                         class="btn btn-sm btn-danger">DELETAR</a>
+                                                            class="btn btn-sm btn-danger">DELETAR</a>
                                                     </div>
                                                 </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <div class="card-body text-right">
+                                <div class="text-right card-body">
                                     1 <span class="text-muted">de 25</span> <a href="#" class="text-muted-light"><i
-                                            class="material-icons ml-1">arrow_forward</i></a>
+                                            class="ml-1 material-icons">arrow_forward</i></a>
                                 </div>
 
                             @else
@@ -134,12 +133,12 @@
 
             </div>
             <!-- // END drawer-layout__content -->
-        @include('layouts.drawer')
+            @include('layouts.drawer-patner')
 
-        <!-- // END drawer-layout -->
+            <!-- // END drawer-layout -->
 
-    </div>
-    <!-- // END header-layout__content -->
+        </div>
+        <!-- // END header-layout__content -->
 
-    <!-- // END header-layout -->
-@endsection
+        <!-- // END header-layout -->
+    @endsection

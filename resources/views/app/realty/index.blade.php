@@ -10,16 +10,16 @@
                     <div class="page__heading d-flex align-items-center">
                         <div class="flex">
                             <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item"><a href="#"><i
-                                                class="material-icons icon-20pt">home</i></a>
+                                <ol class="mb-0 breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
                                     </li>
                                     <li class="breadcrumb-item active">{{ __('crud.properties.name') }}</li>
                                 </ol>
                             </nav>
                             <h1 class="m-0">{{ __('crud.properties.name') }}</h1>
                         </div>
-                        <a href="{{route('realties.create')}}" class="btn btn-success ml-3">{{__('crud.properties.create_title')}}</a>
+                        {{-- <a href="{{ route('realties.create') }}"
+                            class="ml-3 btn btn-success">{{ __('crud.properties.create_title') }}</a> --}}
                     </div>
                 </div>
                 <div class="container-fluid page__container">
@@ -32,10 +32,9 @@
                                     <div class="col-md-8">
 
                                         <div class="search-form search-form--light">
-                                            <input type="text" class="form-control search" placeholder="Search"/>
+                                            <input type="text" class="form-control search" placeholder="Search" />
                                             <button class="btn" type="button" role="button"><i
                                                     class="material-icons">search</i></button>
-
                                         </div>
                                     </div>
                                 </div>
@@ -46,8 +45,7 @@
                                         <tr>
                                             <th style="width: 18px;">
                                                 <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox"
-                                                        class="custom-control-input js-toggle-check-all"
+                                                    <input type="checkbox" class="custom-control-input js-toggle-check-all"
                                                         data-target="#products" id="customCheckAll">
                                                     <label class="custom-control-label" for="customCheckAll"><span
                                                             class="text-hide">Toggle all</span></label>
@@ -92,56 +90,57 @@
                                                     <div><a href="#">{{ $realty->franchise->name }}</a></div>
                                                 </td>
                                                 <td style="">
-                                                    <div class=" badge badge-soft-success">{{$realty->sale_type}}</div>
+                                                    <div class=" badge badge-soft-success">{{ $realty->sale_type }}</div>
                                                 </td>
                                                 <td style="">
-                                                    <div class="badge badge-soft-danger">{{$realty->sale_deadline}}</div>
+                                                    <div class="badge badge-soft-danger">{{ $realty->sale_deadline }}
+                                                    </div>
                                                 </td>
                                                 <td class="text-center">
-                                                    <div >{{ $realty->property_type}}</div>
+                                                    <div>{{ $realty->property_type }}</div>
                                                 </td>
                                                 <td>
-                                                    <img src="{{asset('assets/images/avatars/clem-onojeghuo-192088.jpg')}}"
-                                                        alt="product" style="width:35px" class="rounded mr-2">
+                                                    <img src="{{ asset('assets/images/avatars/clem-onojeghuo-192088.jpg') }}"
+                                                        alt="product" style="width:35px" class="mr-2 rounded">
                                                     <a href="#">{{ $realty->name }}</a>
                                                 </td>
                                                 <td style="" class="text-right">
-                                                    {{$realty->price}}
+                                                    {{ $realty->price }}
                                                 </td>
                                                 <td style="">
-                                                    <div class="text-right">{{$realty->area}}</div>
-                                                </td>
-
-                                                <td style="">
-                                                    <div class="text-right">{{$realty->bathrooms}}</div>
-                                                </td>
-                                                <td style="">
-                                                    <div class="text-right">{{$realty->suite}}</div>
+                                                    <div class="text-right">{{ $realty->area }}</div>
                                                 </td>
 
                                                 <td style="">
-                                                    <div class="text-right">{{$realty->garage}}</div>
+                                                    <div class="text-right">{{ $realty->bathrooms }}</div>
+                                                </td>
+                                                <td style="">
+                                                    <div class="text-right">{{ $realty->suite }}</div>
+                                                </td>
+
+                                                <td style="">
+                                                    <div class="text-right">{{ $realty->garage }}</div>
                                                 </td>
 
                                                 <td class="d-flex justify-content-center align-items-center">
-                                                    <div class=" mx-1"><a href="{{route('realties.create') }}"
-                                                                          class="btn btn-sm btn-success">VER</a>
+                                                    <div class="mx-1 "><a href="{{ route('realties.create') }}"
+                                                            class="btn btn-sm btn-success">VER</a>
                                                     </div>
-                                                    <div class="mx-1"><a href="{{route('realties.create') }}"
-                                                                         class="btn btn-sm btn-primary">EDITAR</a>
+                                                    {{-- <div class="mx-1"><a href="{{ route('realties.create') }}"
+                                                            class="btn btn-sm btn-primary">EDITAR</a>
                                                     </div>
 
                                                     <div class="mx-1"><a href="#"
-                                                                         class="btn btn-sm btn-danger">DELETAR</a>
-                                                    </div>
+                                                            class="btn btn-sm btn-danger">DELETAR</a>
+                                                    </div> --}}
                                                 </td>
                                             </tr>
                                         @endforeach
                                     </tbody>
                                 </table>
-                                <div class="card-body text-right">
+                                <div class="text-right card-body">
                                     1 <span class="text-muted">de 5</span> <a href="#" class="text-muted-light"><i
-                                            class="material-icons ml-1">arrow_forward</i></a>
+                                            class="ml-1 material-icons">arrow_forward</i></a>
                                 </div>
 
                             @else
@@ -154,10 +153,10 @@
                 </div>
             </div>
             <!-- // END drawer-layout__content -->
-        @include('layouts.drawer')
-        <!-- // END drawer-layout -->
+            @include('layouts.drawer-patner')
+            <!-- // END drawer-layout -->
         </div>
-    <!-- // END header-layout__content -->
+        <!-- // END header-layout__content -->
     </div>
     <!-- // END header-layout -->
 @endsection

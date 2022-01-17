@@ -306,7 +306,7 @@
 
             </div>
             <!-- // END drawer-layout__content -->
-        @include('layouts.drawer')
+        @include('layouts.drawer-patner')
 
         <!-- // END drawer-layout -->
 

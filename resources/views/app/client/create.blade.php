@@ -12,9 +12,8 @@
                     <div class="page__heading d-flex align-items-center">
                         <div class="flex">
                             <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item"><a href="#"><i
-                                                class="material-icons icon-20pt">home</i></a>
+                                <ol class="mb-0 breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
                                     </li>
                                     <li class="breadcrumb-item active">cliente</li>
                                 </ol>
@@ -27,43 +26,38 @@
 
                 <div class="container-fluid page__container">
 
-                                <form  method="POST"
-                                       action="{{ route('realties.store') }}"
-                                       enctype="multipart/form-data"
-                                       class="mt-4"
-                                >
-                                    @csrf
-                                    <div class="card card-form">
-                                        <div class="row no-gutters">
-                                            <div class="col-lg-4 card-body">
-                                                <p><strong class="headings-color">Cadastro</strong></p>
+                    <form method="POST" action="{{ route('realties.store') }}" enctype="multipart/form-data"
+                        class="mt-4">
+                        @csrf
+                        <div class="card card-form">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 card-body">
+                                    <p><strong class="headings-color">Cadastro</strong></p>
 
-                                            </div>
-                                            <div class="col-lg-8 card-form__body card-body">
+                                </div>
+                                <div class="col-lg-8 card-form__body card-body">
 
                                     <div class="">
-                                    @include('app.client.form')
+                                        @include('app.client.form')
 
                                     </div>
 
-                                    <button class="btn btn-primary"
-                                            type="submit">Enviar</button>
+                                    <button class="btn btn-primary" type="submit">Enviar</button>
 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
                 </div>
 
             </div>
             <!-- // END drawer-layout__content -->
-        @include('layouts.drawer')
+            @include('layouts.drawer-patner')
 
-        <!-- // END drawer-layout -->
+            <!-- // END drawer-layout -->
 
         </div>
         <!-- // END header-layout__content -->
 
         <!-- // END header-layout -->
-@endsection
-
+    @endsection

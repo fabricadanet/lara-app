@@ -13,8 +13,7 @@
                         <div class="flex">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item"><a href="#"><i
-                                                class="material-icons icon-20pt">home</i></a>
+                                    <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
                                     </li>
                                     <li class="breadcrumb-item active">{{ __('crud.properties') }}</li>
                                 </ol>
@@ -27,11 +26,8 @@
 
                 <div class="container-fluid page__container">
 
-                    <form  method="POST"
-                           action="{{ route('realties.update',$realty->id) }}"
-                           enctype="multipart/form-data"
-                           class="mt-4"
-                    >                        @csrf
+                    <form method="POST" action="{{ route('realties.update', $realty->id) }}" enctype="multipart/form-data"
+                        class="mt-4"> @csrf
                         <div class="card card-form">
                             <div class="row no-gutters">
                                 <div class="col-lg-4 card-body">
@@ -45,8 +41,7 @@
 
                                     </div>
 
-                                    <button class="btn btn-primary"
-                                            type="submit">{{__('crud.common.update')}}</button>
+                                    <button class="btn btn-primary" type="submit">{{ __('crud.common.update') }}</button>
 
                                 </div>
                             </div>
@@ -56,12 +51,12 @@
 
             </div>
             <!-- // END drawer-layout__content -->
-        @include('layouts.drawer')
+            @include('layouts.drawer-patner')
 
-        <!-- // END drawer-layout -->
+            <!-- // END drawer-layout -->
 
         </div>
         <!-- // END header-layout__content -->
 
         <!-- // END header-layout -->
-@endsection
+    @endsection

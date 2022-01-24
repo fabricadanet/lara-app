@@ -6,6 +6,7 @@ use App\Models\Address;
 use App\Models\Franchise;
 use App\Models\Realty;
 use App\Models\Client;
+use App\Models\BuyIntention;
 use App\Http\Requests\StoreClientRequest;
 use App\Http\Requests\UpdateClientRequest;
 
@@ -111,9 +112,8 @@ class ClientController extends Controller
     }
 
     public function buyIntention(){
-        $clients = Client::all();
-        $realties = Realty::all();
+        $buyIntentions = BuyIntention::all();
 
-        return view('app.client.intention.index',compact('clients','realties'));
+        return view('app.client.intention.index',compact('buyIntentions'));
     }
 }

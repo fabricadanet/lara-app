@@ -17,7 +17,7 @@ class CreateBuyIntentionsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('client_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->unsignedBigInteger('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
-            $table->enum('status', ['active', 'inactive'])->default('active');
+            $table->enum('status', ['active', 'inactive','sale_order'])->default('active');
             $table->enum('marital status', ['Solteiro', 'Casado', 'Divorciado', 'Viúvo', 'Outro'])->default('Casado')->nullable();
             $table->enum('children', ['Não', '01', '02', '03', '4 ou mais'])->default('Não')->nullable();
             $table->enum('pets', ['Não', 'Sim'])->default('Não')->nullable();

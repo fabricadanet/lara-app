@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\BuyIntention;
 use App\Models\Client;
 use App\Models\Realty;
+use App\Models\SaleOrder;
 use Illuminate\Http\Request;
 
 class BuyIntentionController extends Controller
@@ -16,8 +17,10 @@ class BuyIntentionController extends Controller
      */
     public function index()
     {
+        $buy_intentions = BuyIntention::where('status', 'active')->get();
+        dd($buy_intentions);
         return view('app.buy_intention.index', [
-            'buy_intentions' => BuyIntention::all()
+            'buy_intentions' => $buy_intentions
         ]);
     }
 
@@ -56,10 +59,12 @@ class BuyIntentionController extends Controller
      * @param  \App\Models\BuyIntention  $buyIntention
      * @return \Illuminate\Http\Response
      */
-    public function show(BuyIntention $buyIntention)
+    public function show(BuyIntention $buyIntention, $id)
     {
-        //
+        $buyIntention = BuyIntention::find($id);
+        return view('app.client.intention.show',compact('buyIntention'));
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -93,5 +98,18 @@ class BuyIntentionController extends Controller
     public function destroy(BuyIntention $buyIntention)
     {
         //
+    }
+
+    public function createSale($id)
+    {
+        $buyIntention = BuyIntention::find($id);
+        $buyIntention->status = 'sale_order';
+        $buyIntention->update();
+        SaleOrder::create([
+            'buy_intention_id' => $id,
+            'user_id' => auth()->user()->id,
+            'status' => 'waiting'
+        ]);
+        return redirect()->route('clients.intention');
     }
 }

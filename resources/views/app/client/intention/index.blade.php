@@ -13,7 +13,8 @@
                         <div class="flex">
                             <nav aria-label="breadcrumb">
                                 <ol class="mb-0 breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
+                                    <li class="breadcrumb-item"><a href="{{ route('dashboard.patner') }}"><i
+                                                class="material-icons icon-20pt">home</i></a>
                                     </li>
                                     <li class="breadcrumb-item active">{{ __('Intenção de compra') }}</li>
                                 </ol>
@@ -21,7 +22,7 @@
                             <h1 class="m-0">{{ __('Intenções de Compra') }}</h1>
                         </div>
                         <a href="{{ route('buy_intention.create') }}"
-                            class="ml-3 btn btn-success">{{ __('Nova Intenção de Compra') }}</a>
+                            class="ml-3 btn btn-success">{{ __('Registrar Intenção') }}</a>
                     </div>
                 </div>
 
@@ -57,7 +58,7 @@
                                             <th>Telefone</th>
                                             <th style="" class="text-center">#ID Imóvel</th>
                                             <th>Imóvel</th>
-                                            <th>Status</th>
+                                            <th>Franquia</th>
                                             <th class="text-center">Ações</th>
                                         </tr>
                                     </thead>
@@ -78,28 +79,41 @@
                                                     <div class="badge badge-soft-dark">{{ $buyIntention->id }}</div>
                                                 </td>
                                                 <td>
-                                                    <div><a href="#">{{ $buyIntention->client->id }}</a></div>
+                                                    <div><a
+                                                            href="{{ route('buy_intention.show', ['id' => $buyIntention->id]) }}">{{ $buyIntention->client->id }}</a>
+                                                    </div>
                                                 </td>
                                                 <td>
-                                                    <div><a href="#">{{ $buyIntention->client->name }}</a></div>
+                                                    <div><a
+                                                            href="{{ route('buy_intention.show', ['id' => $buyIntention->id]) }}">{{ $buyIntention->client->name }}</a>
+                                                    </div>
                                                 </td>
                                                 <td>
-                                                    <div><a href="#">{{ $buyIntention->client->whatsapp }}</a></div>
+                                                    <div><a
+                                                            href="{{ route('buy_intention.show', ['id' => $buyIntention->id]) }}">{{ $buyIntention->client->whatsapp }}</a>
+                                                    </div>
                                                 </td>
                                                 <td>
-                                                    <div><a href="#">{{ $buyIntention->realty->id }}</a></div>
+                                                    <div><a
+                                                            href="{{ route('buy_intention.show', ['id' => $buyIntention->id]) }}">{{ $buyIntention->realty_id }}</a>
+                                                    </div>
                                                 </td>
                                                 <td>
-                                                    <div><a href="#">{{ $buyIntention->realty->name }}</a></div>
+                                                    <div><a
+                                                            href="{{ route('buy_intention.show', ['id' => $buyIntention->id]) }}">{{ $buyIntention->realty->name }}</a>
+                                                    </div>
                                                 </td>
                                                 <td>
-                                                    <div><a href="#">{{ $buyIntention->status }}</a></div>
+                                                    <div><a
+                                                            href="{{ route('buy_intention.show', ['id' => $buyIntention->id]) }}">{{ $buyIntention->realty->franchise->name }}</a>
+                                                    </div>
                                                 </td>
                                                 <td class="d-flex justify-content-center align-items-center">
-                                                    {{-- <div class="mx-1 "><a href="{{ route('clients.edit',$cliente->id) }}"
+                                                    {{-- <div class="mx-1 "><a href=""
                                                             class="btn btn-sm btn-success">VER</a>
                                                     </div> --}}
-                                                    <div class="mx-1"><a href=""
+                                                    <div class="mx-1"><a
+                                                            href="{{ route('buy_intention.sale', $buyIntention->id) }}"
                                                             class="btn btn-sm btn-primary">Gerar Pedido de venda</a>
                                                     </div>
 

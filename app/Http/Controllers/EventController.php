@@ -2,7 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Event;
+use App\Models\Realty;
 
 class EventController extends Controller
 {
@@ -13,7 +17,8 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('app.event.index');
+        $events = Event::all();
+        return view('app.event.index', compact('events'));
     }
 
     /**
@@ -23,7 +28,9 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        $clients = Client::all();
+        $realties = Realty::all();
+        return view('app.event.create', compact('clients', 'realties'));
     }
 
     /**
@@ -32,9 +39,12 @@ class EventController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request )
     {
-        //
+        $data = $request->all();
+        $data['user_id'] = auth()->user()->id;
+         Event::create($data);
+        return redirect()->route('event.index');
     }
 
     /**
@@ -80,5 +90,10 @@ class EventController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getEvents(){
+        $events = Event::all()->toArray();
+        return response()->json($events);
     }
 }

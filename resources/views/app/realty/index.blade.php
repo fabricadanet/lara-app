@@ -11,7 +11,8 @@
                         <div class="flex">
                             <nav aria-label="breadcrumb">
                                 <ol class="mb-0 breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
+                                    <li class="breadcrumb-item"><a href="{{ route('dashboard.patner') }}"><i
+                                                class="material-icons icon-20pt">home</i></a>
                                     </li>
                                     <li class="breadcrumb-item active">{{ __('crud.properties.name') }}</li>
                                 </ol>
@@ -57,15 +58,13 @@
                                             <th class="text-left">Prazo</th>
                                             <th class="text-left">Tipo</th>
                                             <th>{{ __('Name') }}</th>
-                                            <th class="text-right">Preço</th>
-                                            <th class="text-right">Área</th>
+                                            <th class="text-right">Preço (R$)</th>
+                                            <th class="text-right">Área (m<sup>2</sup>)</th>
                                             <th class="text-right">Quartos</th>
                                             <th class="text-right">Suítes</th>
-
                                             <th class="text-right">Vagas</th>
 
 
-                                            <th class="text-center">Ações</th>
                                         </tr>
                                     </thead>
                                     <tbody class="list" id="franchises">
@@ -87,7 +86,7 @@
                                                 </td>
 
                                                 <td>
-                                                    <div><a href="#">{{ $realty->franchise->name }}</a></div>
+                                                    <div>{{ $realty->franchise->name }}</div>
                                                 </td>
                                                 <td style="">
                                                     <div class=" badge badge-soft-success">{{ $realty->sale_type }}</div>
@@ -100,9 +99,10 @@
                                                     <div>{{ $realty->property_type }}</div>
                                                 </td>
                                                 <td>
-                                                    <img src="{{ asset('assets/images/avatars/clem-onojeghuo-192088.jpg') }}"
+                                                    <img src="{{ $realty->property_type == 'Casa' ? asset('assets/images/realties/casa.jpg') : asset('assets/images/realties/apartamentos.jpg') }}"
                                                         alt="product" style="width:35px" class="mr-2 rounded">
-                                                    <a href="#">{{ $realty->name }}</a>
+                                                    <a
+                                                        href="{{ route('realties.show', ['id' => $realty->id]) }}">{{ $realty->name }}</a>
                                                 </td>
                                                 <td style="" class="text-right">
                                                     {{ $realty->price }}
@@ -122,18 +122,7 @@
                                                     <div class="text-right">{{ $realty->garage }}</div>
                                                 </td>
 
-                                                <td class="d-flex justify-content-center align-items-center">
-                                                    <div class="mx-1 "><a href="{{ route('realties.create') }}"
-                                                            class="btn btn-sm btn-success">VER</a>
-                                                    </div>
-                                                    {{-- <div class="mx-1"><a href="{{ route('realties.create') }}"
-                                                            class="btn btn-sm btn-primary">EDITAR</a>
-                                                    </div>
 
-                                                    <div class="mx-1"><a href="#"
-                                                            class="btn btn-sm btn-danger">DELETAR</a>
-                                                    </div> --}}
-                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

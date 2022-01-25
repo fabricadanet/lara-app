@@ -13,7 +13,8 @@
                         <div class="flex">
                             <nav aria-label="breadcrumb">
                                 <ol class="mb-0 breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
+                                    <li class="breadcrumb-item"><a href="{{ route('dashboard.patner') }}"><i
+                                                class="material-icons icon-20pt">home</i></a>
                                     </li>
                                     <li class="breadcrumb-item active">Intenção de Compra</li>
                                 </ol>
@@ -39,7 +40,7 @@
                                     <div class="">
                                         <div class="form-row">
                                             <x-inputs.group class="col-sm-12 ">
-                                                <x-inputs.select class="my-auto mt-3" name="client_id" Label="Cliente">
+                                                <x-inputs.select class="my-auto mt-3" name="client_id" Label="Cliente *">
                                                     <option value="">Selecione</option>
                                                     @foreach ($clients as $client)
                                                         <option value="{{ $client->id }}">{{ $client->id }} -
@@ -50,7 +51,7 @@
                                         </div>
                                         <div class="form-row">
                                             <x-inputs.group class="col-sm-12 ">
-                                                <x-inputs.select class="my-auto mt-3" name="realty_id" Label="Imóvel">
+                                                <x-inputs.select class="my-auto mt-3" name="realty_id" Label="Imóvel *">
                                                     <option value="">Selecione</option>
                                                     @foreach ($realties as $realty)
                                                         <option value="{{ $realty->id }}">{{ $realty->id }} -

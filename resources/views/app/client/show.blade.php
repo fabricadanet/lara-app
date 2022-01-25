@@ -13,7 +13,8 @@
                         <div class="flex">
                             <nav aria-label="breadcrumb">
                                 <ol class="mb-0 breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
+                                    <li class="breadcrumb-item"><a href="{{ route('dashboard.patner') }}"><i
+                                                class="material-icons icon-20pt">home</i></a>
                                     </li>
                                     <li class="breadcrumb-item active">{{ __('Franchises') }}</li>
                                 </ol>

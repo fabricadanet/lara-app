@@ -112,8 +112,7 @@ class ClientController extends Controller
     }
 
     public function buyIntention(){
-        $buyIntentions = BuyIntention::all();
-
-        return view('app.client.intention.index',compact('buyIntentions'));
+         $buyIntentions = BuyIntention::where('status', 'active')->get();
+         return view('app.client.intention.index',compact('buyIntentions'));
     }
 }

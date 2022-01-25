@@ -13,7 +13,8 @@
                         <div class="flex">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb mb-0">
-                                    <li class="breadcrumb-item"><a href="#"><i class="material-icons icon-20pt">home</i></a>
+                                    <li class="breadcrumb-item"><a href="{{ route('dashboard.patner') }}"><i
+                                                class="material-icons icon-20pt">home</i></a>
                                     </li>
                                     <li class="breadcrumb-item active">Pedido de Venda</li>
                                 </ol>
@@ -26,91 +27,121 @@
 
                 <div class="container-fluid page__container">
 
-                    <form method="POST" action="#" enctype="multipart/form-data" class="mt-4">
-                        @csrf
-                        <div class="card card-form">
-                            <div class="row no-gutters">
-                                <div class="col-lg-4 card-body">
-                                    <p><strong class="headings-color">Solicitação</strong></p>
+                    <div class="table-responsive">
 
-                                </div>
-                                <div class="col-lg-8 card-form__body card-body">
-                                    <div class="">
-                                        <div class="form-row">
-                                            <x-inputs.group class="col-12">
-                                                <x-inputs.text name="name" label="Nome" value="" maxlength="255"
-                                                    placeholder="Nome do Cliente"></x-inputs.text>
-                                            </x-inputs.group>
-                                            <x-inputs.group class="col-sm-12 ">
-                                                <x-inputs.select class="my-auto mt-3" name="client" Label="Cliente">
-                                                    <option value="">Selecione</option>
-                                                    @foreach ($clients as $client)
-                                                        <option value="{{ $client->id }}">{{ $client->id }} -
-                                                            {{ $client->name }}</option>
-                                                    @endforeach
-                                                </x-inputs.select>
-                                            </x-inputs.group>
-                                            <x-inputs.group class="col-sm-12 ">
-                                                <x-inputs.select class="my-auto mt-3" name="client" Label="Cliente">
-                                                    <option value="">Selecione</option>
-                                                    @foreach ($realties as $realty)
-                                                        <option value="{{ $realty->id }}">{{ $realty->id }} -
-                                                            {{ $realty->name }} - {{ $realty->franchise->name }}
-                                                        </option>
-                                                    @endforeach
-                                                </x-inputs.select>
-                                            </x-inputs.group>
+                        {{-- <div class="m-3">
+                            <div class="row">
 
-                                        </div>
-                                        <div class="form-row">
-                                            <x-inputs.group class="col-sm-4">
-                                                <x-inputs.text name="code" label="Código do Imóvel"
-                                                    value="{{ old('code') }}" maxlength="255"
-                                                    placeholder="Código do Imóvel"></x-inputs.text>
-                                            </x-inputs.group>
-                                            <x-inputs.group class="col-sm-8">
-                                                <x-inputs.text name="franchise" label="Franquia"
-                                                    value="{{ old('franchise') }}" maxlength="255"
-                                                    placeholder="Nome da Franquia"></x-inputs.text>
-                                            </x-inputs.group>
-                                        </div>
-                                        <div class="form-row">
-                                            <x-inputs.group class="col-sm-4">
-                                                <x-inputs.text name="price" label="Valor" value="{{ old('price') }}"
-                                                    maxlength="255" placeholder="Valor da compra"></x-inputs.text>
-                                            </x-inputs.group>
-                                            <x-inputs.group class="col-sm-6 ">
-                                                <x-inputs.select class="my-auto mt-3" name="marital_status"
-                                                    Label="Status">
-                                                    <option disabled value="">Selecione</option>
-                                                    <option value="Aberto">Aberta</option>
-                                                    <option value="Fechado">Fechada</option>
-                                                    <option value="Cancelado">Cancelada</option>
-                                                    <option value="Urgente">Urgente</option>
-                                                </x-inputs.select>
-                                            </x-inputs.group>
-                                        </div>
-                                        <div class="form-row">
+                                <div class="col-md-8 " style="{ display: none;}">
 
-
-
-                                        </div>
-
-                                        <div class="form-row">
-                                            <x-inputs.group class="col-sm-12">
-                                                <x-inputs.textarea name="description" label="Observação"
-                                                    value="{{ old('description') }}" maxlength="255"
-                                                    placeholder="Descrição"></x-inputs.textarea>
-                                            </x-inputs.group>
-                                        </div>
-
-                                        <button class="btn btn-primary" type="submit">Enviar</button>
+                                    <div class="search-form search-form--light">
+                                        <input type="text" class="form-control search" placeholder="Search">
+                                        <button class="btn" type="button" role="button"><i
+                                                class="material-icons">search</i></button>
 
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </div> --}}
+                        @if (!empty($sale_orders))
+                            <table class="table mb-0 thead-border-top-0 table-striped">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 18px;">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input js-toggle-check-all"
+                                                    data-target="#products" id="customCheckAll">
+                                                <label class="custom-control-label" for="customCheckAll"><span
+                                                        class="text-hide">Toggle all</span></label>
+                                            </div>
+                                        </th>
+                                        <th style="width: 30px;" class="text-center">#ID</th>
+                                        <th>Nome</th>
+                                        <th>Telefone</th>
+                                        <th>#ID Franquia</th>
+                                        <th>Franquia</th>
+                                        <th>#ID Imóvel</th>
+                                        <th>Imóvel</th>
+                                        <th>Status</th>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody class="list" id="franchises">
+
+                                    @foreach ($sale_orders as $sale_order)
+                                        <tr>
+
+                                            <td class="text-center">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox"
+                                                        class="custom-control-input js-check-selected-row"
+                                                        id="customCheck1_1">
+                                                    <label class="custom-control-label" for="customCheck1_1"><span
+                                                            class="text-hide">Check</span></label>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="badge badge-soft-dark">{{ $sale_order->id }}</div>
+                                            </td>
+
+                                            <td>
+                                                <div><a href="#">{{ $sale_order->buyIntention->client->name }}</a></div>
+                                            </td>
+
+                                            <td>
+                                                <div><a href="#">{{ $sale_order->buyIntention->client->phone }}</a></div>
+                                            </td>
+                                            <td>
+                                                <div><a href="#">{{ $sale_order->buyIntention->realty->franchise_id }}</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div><a
+                                                        href="#">{{ $sale_order->buyIntention->realty->franchise->name }}</a>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div><a href="#">{{ $sale_order->buyIntention->realty->id }}</a></div>
+                                            </td>
+                                            <td>
+                                                <div><a href="#">{{ $sale_order->buyIntention->realty->name }}</a></div>
+                                            </td>
+                                            <td>
+                                                <div><a href="#">
+                                                        @switch($sale_order->status)
+                                                            @case('active')
+                                                                <span class="badge badge-success">Ativo</span>
+                                                            @break
+                                                            @case('inactive')
+                                                                <span class="badge badge-warning">Inativo</span>
+                                                            @break
+                                                            @case('canceled')
+                                                                <span class="badge badge-danger">Cancelado</span>
+                                                            @break
+                                                            @case('waiting')
+                                                                <span class="badge badge-info">Em análise</span>
+                                                            @break
+                                                        @endswitch
+                                                    </a>
+                                                </div>
+
+                                            </td>
+
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                            <div class="text-right card-body">
+                                1 <span class="text-muted">de 25</span> <a href="#" class="text-muted-light"><i
+                                        class="ml-1 material-icons">arrow_forward</i></a>
+                            </div>
+
+                        @else
+                            <p class="text-center text-">Não há Pedidos de vendas cadastrados!</p>
+                        @endif
+
+                    </div>
                 </div>
 
             </div>

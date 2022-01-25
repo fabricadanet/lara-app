@@ -81,7 +81,7 @@ Route::prefix('/')->middleware('auth')->group(function () {
         'create',
     ])->name('clients.create');
 
-    Route::get('clients/{id}', [
+    Route::get('clients/{id}/show', [
         ClientController::class,
         'show',
     ])->name('clients.show');
@@ -117,7 +117,7 @@ Route::prefix('/')->middleware('auth')->group(function () {
         'create',
     ])->name('realties.create');
 
-    Route::get('realties/{id}', [
+    Route::get('realties/{id}/show', [
         RealtyController::class,
         'show',
     ])->name('realties.show');
@@ -148,4 +148,3 @@ require __DIR__.'/patner.php';
 require __DIR__.'/admin.php';
 require __DIR__.'/franchise.php';
 require __DIR__.'/client.php';
-

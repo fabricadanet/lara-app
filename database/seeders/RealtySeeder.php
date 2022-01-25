@@ -33,7 +33,7 @@ class RealtySeeder extends Seeder
             "decision maker" => "Família",
             "location" => "Centros Urbanos",
             "sale_deadline" => "Urgente",
-            "financing" => "já financiado",
+            "financing" => "Financiado",
             "construction" => "Novo",
             "property_type" => "Casa",
             "swap_type" => "Não",
